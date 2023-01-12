@@ -1,9 +1,17 @@
-# Security Policy
+# Security
 
 ## Reporting a Vulnerability
 
-Use this section to tell people how to report a vulnerability.
+Please report (suspected) security vulnerabilities to security@iohk.io. You will receive a
+response from us within 48 hours. If the issue is confirmed, we will release a patch as soon
+as possible.
 
-Tell them where to go, how often they can expect to get an update on a
-reported vulnerability, what to expect if the vulnerability is accepted or
-declined, etc.
+Please provide a clear and concise description of the vulnerability, including:
+
+* the affected version(s),
+* steps that can be followed to exercise the vulnerability,
+* any workarounds or mitigations.
+
+If you have developed any code or utilities that can help demonstrate the suspected
+vulnerability, please mention them in your email but ***DO NOT*** attempt to include them as
+attachments as this may cause your Email to be blocked by spam filters.
