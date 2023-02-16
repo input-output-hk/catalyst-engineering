@@ -35,6 +35,9 @@
 
 ### Learning Resources
 
+- [Dart](dart.md)
+- [Flutter](flutter.md)
+
 ## Codebase
 
 ### Code Reviews
@@ -60,7 +63,6 @@
 ## Testing
 
 ### How to QA
-
 
 ## Support
 
