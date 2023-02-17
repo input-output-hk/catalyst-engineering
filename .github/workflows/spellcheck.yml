@@ -1,0 +1,26 @@
+name: Spellcheck
+
+on: [push, pull_request]
+
+jobs:
+  deploy:
+    name: Spellcheck all documentation
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.ref }}
+    steps:
+      - name: Checkout The Code
+        uses: actions/checkout@v3
+
+      - name: Set env
+        run: |
+          GIT_BRANCH=${GITHUB_HEAD_REF:-${GITHUB_REF#refs/heads/}}
+          echo "GIT_BRANCH=$GIT_BRANCH" >> $GITHUB_ENV
+
+      - name: Spellcheck
+        uses: docker://ghcr.io/input-output-hk/catalyst-gh-tools:v1.3
+        with:
+          entrypoint: cargo
+          args: make spellcheck
