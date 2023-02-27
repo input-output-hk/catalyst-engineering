@@ -34,12 +34,10 @@
 
 ### Learning Resources
 
-- [Dart](dart.md)
-- [Flutter](flutter.md)
+- [Dart](learning_resources/dart.md)
+- [Flutter](learning_resources/flutter.md)
 
 ## Codebase
-
-
 
 ### Code Reviews
 
