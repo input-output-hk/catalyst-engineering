@@ -26,6 +26,8 @@
 
 ## Guides & Processes
 
+- [Meetings Policy](guides_and_processes/meeting_policy.md)
+
 ### Getting Started
 
 ### Engineering Guidelines
