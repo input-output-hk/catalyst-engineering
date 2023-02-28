@@ -1,0 +1,8 @@
+Boostrapping
+dartdoc
+goldens
+Intelli
+lcov
+localizable
+xcassets
+xcworkspace
