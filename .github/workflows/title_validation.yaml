@@ -1,0 +1,36 @@
+# See https://github.com/amannn/action-semantic-pull-request
+name: 'PR title'
+
+on:
+  pull_request_target:
+    types:
+      - opened
+      - edited
+      - synchronize
+
+jobs:
+  title:
+    name: is conventional
+    runs-on: ubuntu-latest
+    steps:
+      - uses: amannn/action-semantic-pull-request@v5
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          types: |
+            build
+            chore
+            ci
+            dependencies
+            docs
+            feat
+            feature
+            fix
+            perf
+            refactor
+            revert
+            style
+            test
+          subjectPattern: ^[A-Z].+$
+          subjectPatternError: |
+            The subject of the PR must begin with an uppercase letter.
