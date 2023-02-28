@@ -12,6 +12,7 @@ rustdoc
 surrealdb
 testnet
 cherrypick
+cherrypicks
 Codelabs
 rxdart
 mdbooks
