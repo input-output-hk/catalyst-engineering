@@ -11,3 +11,7 @@ rustc
 rustdoc
 surrealdb
 testnet
+cherrypick
+Codelabs
+rxdart
+mdbooks
