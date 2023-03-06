@@ -26,6 +26,8 @@
 
 ## Guides & Processes
 
+- [Branch Policy](guides_and_processes/branch_policy.md)
+- [Release Policy](guides_and_processes/release_policy.md)
 - [Meetings Policy](guides_and_processes/meeting_policy.md)
 
 ### Getting Started
