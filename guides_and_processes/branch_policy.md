@@ -14,7 +14,7 @@ All new features should be developed in feature branches and merged into main th
 
 ## Feature branches
 
-Feature branches should be created for every new feature or bug fix.****
+Feature branches should be created for every new feature or bug fix.
 The naming convention for feature branches should be descriptive and follow a consistent format, such as `feature/{jira-or-github-issue-id}-{name-of-feature}`.
 All changes should be made in the feature branch and tested thoroughly before merging into main.
 
