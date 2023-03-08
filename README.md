@@ -27,8 +27,9 @@
 ## Guides & Processes
 
 - [Branch Policy](guides_and_processes/branch_policy.md)
-- [Release Policy](guides_and_processes/release_policy.md)
 - [Meetings Policy](guides_and_processes/meeting_policy.md)
+- [Ownership Policy](guides_and_processes/ownership.md)
+- [Release Policy](guides_and_processes/release_policy.md)
 
 ### Getting Started
 
@@ -63,7 +64,6 @@
 - [Custom GH Action to speed up and simplify building mdbooks for the Catalyst project.](https://github.com/input-output-hk/catalyst-gh-tools)
 - [📚 All things engineering: processes, best practices, setup guides, and more!](https://github.com/input-output-hk/catalyst-engineering)
 - [🗳️ A collection of Catalyst plugins for Flutter and Dart.](https://github.com/input-output-hk/catalyst_flutter)
-
 
 **Private**
 
