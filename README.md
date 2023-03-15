@@ -48,7 +48,7 @@
 
 ### Style Guides
 
-- [Rust]()
+- [Rust](https://input-output-hk.github.io/catalyst-core/main/06_rust_api/rust_style_guide.html)
 - [Dart]()
 - [Flutter]()
 
