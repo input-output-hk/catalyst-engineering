@@ -9,7 +9,7 @@
 
 ## Getting Started
 
-- [Comprehensive Rust 🦀]https://google.github.io/comprehensive-rust/welcome.html()
+- [Comprehensive Rust](https://google.github.io/comprehensive-rust/welcome.html)
 - [Rust-101](https://www.ralfj.de/projects/rust-101/main.html)
 - [Rust on Exercism](https://exercism.org/tracks/rust)
 - [A half-hour to learn Rust](https://fasterthanli.me/articles/a-half-hour-to-learn-rust)
@@ -61,6 +61,7 @@
 ## Other
 
 - [Rust Language Cheat Sheet](https://cheats.rs/)
+- [Rust Container Cheat sheet](https://github.com/input-output-hk/catalyst-engineering/blob/main/assets/rust_container_cheat_sheet.pdf)
 - [The Periodic Table of Rust Types](http://cosmic.mearie.org/2014/01/periodic-table-of-rust-types/)
 - [Rust String Conversions](https://docs.google.com/spreadsheets/u/1/d/19vSPL6z2d50JlyzwxariaYD6EU2QQUQqIDOGbiGQC7Y/pubhtml?gid=0&single=true)
 - [Rust API Guidelines](https://rust-lang.github.io/api-guidelines/about.html)
