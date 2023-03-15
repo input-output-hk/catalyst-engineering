@@ -11,9 +11,6 @@
   - [Codebase](#codebase)
     - [Code Reviews](#code-reviews)
     - [Style Guides](#style-guides)
-      - [Rust](#rust)
-      - [Dart](#dart)
-      - [Flutter](#flutter)
     - [Engineering Directory](#engineering-directory)
     - [Repositories](#repositories)
     - [Nix](#nix)
@@ -41,18 +38,19 @@
 
 - [Dart](learning_resources/dart.md)
 - [Flutter](learning_resources/flutter.md)
+- [Rust](learning_resources/rust.md)
 
 ## Codebase
 
 ### Code Reviews
 
+- [Code Reviews]()
+
 ### Style Guides
 
-#### Rust
-
-#### Dart
-
-#### Flutter
+- [Rust]()
+- [Dart]()
+- [Flutter]()
 
 ### Engineering Directory
 
