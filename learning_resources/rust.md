@@ -41,9 +41,8 @@
 ## YouTube channels
 
 - [Jon Gjengset](https://www.youtube.com/c/JonGjengset)
+- [Code to the Moon](https://www.youtube.com/@codetothemoon)
 - [Rust Crash Course](https://www.youtube.com/watch?v=zF34dRivLOw)
-- []()
-- []()
 
 ## Samples & tutorials
 
