@@ -3,16 +3,12 @@
 > All things engineering: processes, best practices, setup guides, and more!
 
 - [📚 Catalyst Engineering](#-catalyst-engineering)
-  - [Guides \& Processes](#guides--processes)
-    - [Getting Started](#getting-started)
-    - [Engineering Guidelines](#engineering-guidelines)
-    - [Development Lifecycle](#development-lifecycle)
-    - [Learning Resources](#learning-resources)
-  - [Codebase](#codebase)
-    - [Code Reviews](#code-reviews)
+  - [Getting Started](#getting-started)
+    - [Guides \& Processes](#guides--processes)
     - [Style Guides](#style-guides)
     - [Engineering Directory](#engineering-directory)
     - [Repositories](#repositories)
+    - [Learning Resources](#learning-resources)
     - [Nix](#nix)
   - [Infrastructure](#infrastructure)
     - [Environment](#environment)
@@ -21,29 +17,15 @@
   - [Support](#support)
   - [License](#license)
 
-## Guides & Processes
+## Getting Started
+
+### Guides & Processes
 
 - [Branch Policy](guides_and_processes/branch_policy.md)
 - [Meetings Policy](guides_and_processes/meeting_policy.md)
 - [Ownership Policy](guides_and_processes/ownership.md)
 - [Release Policy](guides_and_processes/release_policy.md)
-
-### Getting Started
-
-### Engineering Guidelines
-
-### Development Lifecycle
-
-### Learning Resources
-
-- [Dart](learning_resources/dart.md)
-- [Flutter](learning_resources/flutter.md)
-- [Rust](learning_resources/rust.md)
-
-## Codebase
-
-### Code Reviews
-
+- [Development Lifecycle](guides_and_processes/development_lifecycle.md)
 - [Code Reviews]()
 
 ### Style Guides
@@ -71,6 +53,12 @@
 - [🧪 Catalyst Unified Platform is an Android, iOS, and Web application built with Flutter](https://github.com/input-output-hk/catalyst_unified_platform)
 - [CUP iOS Code Signing](https://github.com/input-output-hk/cup-ios-codesigning)
 - [Voting App](https://github.com/input-output-hk/norns)
+
+### Learning Resources
+
+- [Dart](learning_resources/dart.md)
+- [Flutter](learning_resources/flutter.md)
+- [Rust](learning_resources/rust.md)
 
 ### Nix
 
