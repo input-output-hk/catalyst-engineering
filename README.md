@@ -50,7 +50,7 @@
 
 - [Rust](https://input-output-hk.github.io/catalyst-core/main/06_rust_api/rust_style_guide.html)
 - [Dart](style_guides/dart_style_guide.md)
-- [Flutter]()
+- [Flutter](style_guides/flutter_style_guide.md)
 
 ### Engineering Directory
 

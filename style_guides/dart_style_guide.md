@@ -1,9 +1,9 @@
-# Dart
+# Dart Style Guide
 
 The Catalyst projects follows the guidelines in [Effective Dart](https://dart.dev/guides/language/effective-dart), but with some additions.
 All code must be formatted using [dart format](https://dart.dev/tools/dart-format) before being checked in.
 
-- [Dart](#dart)
+- [Dart Style Guide](#dart-style-guide)
   - [Additional Style Rules](#additional-style-rules)
     - [DON'T follow the Flutter repository style guide.](#dont-follow-the-flutter-repository-style-guide)
     - [DO use trailing commas.](#do-use-trailing-commas)
@@ -89,7 +89,8 @@ Assume anything public in the lib directory will be re-used.
 
 ### CONSIDER exporting publicly visible classes in a single `.dart` file.
 
-For multiple classes that are used together but are in different files, it’s more convenient for users of your library to import a single file rather many at once.
+For multiple classes that are used together but are in different files,
+it’s more convenient for users of your library to import a single file rather many at once.
 If the user wants narrower imports they can always restrict visibility using the show keyword.
 
 This also helps minimize the publicly visible surface.
