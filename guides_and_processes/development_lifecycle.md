@@ -23,7 +23,7 @@ In case of the bug: `bugfix/npg-999-fix-api-error`
 
 ## Create a pull request on GitHub
 
-- Include the Jira/GitHub task link in your PR description.
+- Include the Jira/GitHub task link in your PR description. Read more about [GitHub PR](https://github.com/input-output-hk/catalyst-engineering/blob/main/guides_and_processes/ownership.md#github-pr).
 - In case it’s possible visually to demonstrate your work, attach images or video.
 
 ## Submit for review
