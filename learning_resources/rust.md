@@ -57,6 +57,7 @@
 - [Reading Rust Function Signatures](https://hoverbear.org/blog/reading-rust-function-signatures/)
 - [Using the Kani Rust Verifier on a Firecracker Example](https://model-checking.github.io//kani-verifier-blog/2022/07/13/using-the-kani-rust-verifier-on-a-firecracker-example.html)
 - [Clear explanation of Rust’s module system](https://www.sheshbabu.com/posts/rust-module-system/)
+- [Rust Design Patterns](https://rust-unofficial.github.io/patterns/)
 
 ## Other
 
