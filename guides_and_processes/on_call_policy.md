@@ -9,6 +9,7 @@
   - [Incident Reporting](#incident-reporting)
   - [Escalation](#escalation)
   - [Backup \& Redundancy](#backup--redundancy)
+  - [Feedback Loop](#feedback-loop)
 
 ## Objective:
 
@@ -44,10 +45,15 @@ minimizing potential downtime or disruptions to the Cardano community.
 
 ## Escalation
 
-- Establish an escalation path, including contacts within IOHK or other Cardano-associated organizations if needed.
-- Define a clear escalation timeframe if the primary on-call person cannot address the issue.
+- If an on-call engineer cannot resolve an issue within a set period (e.g., 1 hour), escalate to a senior engineer or team lead
+- Have a list of contacts for different expertise areas.
 
 ## Backup & Redundancy
 
 - Always have a backup on-call person in case the primary engineer is unavailable.
 - Consider having redundant setups for critical systems or nodes to ensure availability.
+
+## Feedback Loop
+
+- Post-mortem after every major incident to identify root causes and prevent recurrence.
+- Regular reviews of on-call incidents, looking for patterns and potential improvements.
