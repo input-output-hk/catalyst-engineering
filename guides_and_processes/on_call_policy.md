@@ -1,7 +1,7 @@
 # On-Call Policy
 
 - [On-Call Policy](#on-call-policy)
-  - [Objective:](#objective)
+  - [Objective](#objective)
   - [Selection of On-Call Personnel](#selection-of-on-call-personnel)
   - [Duration and Rotation](#duration-and-rotation)
   - [Response and Resolution Times](#response-and-resolution-times)
@@ -11,7 +11,7 @@
   - [Backup \& Redundancy](#backup--redundancy)
   - [Feedback Loop](#feedback-loop)
 
-## Objective:
+## Objective
 
 Ensure the Catalyst project's uninterrupted functioning by swiftly identifying and addressing technical issues,
 minimizing potential downtime or disruptions to the Cardano community.
