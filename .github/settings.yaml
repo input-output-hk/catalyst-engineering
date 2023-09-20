@@ -1,0 +1,77 @@
+labels:
+    - name: 'bug'
+      color: d73a4a
+      description: Something isn't working as expected.
+
+    - name: 'dependencies'
+      color: 0366d6
+      description: Pull requests that update a dependency file.
+
+    - name: 'do not merge yet'
+      color: 1EB2F5
+      description: PR is not ready to be merged yet.
+
+    - name: 'do not review yet'
+      color: D44389
+      description: PR is not ready for the review yet.
+
+    - name: 'documentation'
+      color: 0075ca
+      description: Improvements or additions to documentation.
+
+    - name: 'draft'
+      color: E29E35
+      description: Draft PR.
+
+    - name: 'duplicate'
+      color: cfd3d7
+      description: This issue or pull request already exists.
+
+    - name: 'enhancement'
+      color: a2eeef
+      description: New feature or suggest an improvement for an existing feature.
+
+    - name: 'help wanted'
+      color: 008672
+      description: Extra attention is needed.
+
+    - name: 'in triage'
+      color: CDED24
+      description: Presently being triaged by the triage team.
+
+    - name: 'invalid'
+      color: e4e669
+      description: This doesn't seem right.
+
+    - name: 'question'
+      color: d876e3
+      description: Further information is requested.
+
+    - name: 'review me'
+      color: 65FA5D
+      description: PR is ready for review.
+
+    - name: 'Security'
+      color: fbff00
+      description: A problem or enhancement related to a security issue.
+
+    - name: 'Test'
+      color: ce54e3
+      description: A problem or enhancement related to a test.
+
+    - name: 'Priority: High'
+      color: ff008c
+      description: Task is considered higher-priority.
+
+    - name: 'Priority: Medium'
+      color: 690a34
+      description: Task is considered medium-priority.
+
+    - name: 'Priority: Low'
+      color: 690a34
+      description: Task is considered lower-priority.
+
+
+    - name: '3rd party issue'
+      color: e88707
+      description: This issue might be caused by a 3rd party script/package/other reasons
