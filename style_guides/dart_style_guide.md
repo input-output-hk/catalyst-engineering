@@ -12,12 +12,20 @@ All code must be formatted using [dart format](https://dart.dev/tools/dart-forma
   - [Additional Usage Rules](#additional-usage-rules)
     - [PREFER minimizing the number of public members.](#prefer-minimizing-the-number-of-public-members)
     - [CONSIDER exporting publicly visible classes in a single `.dart` file.](#consider-exporting-publicly-visible-classes-in-a-single-dart-file)
-    - [DO import all files within a package using relative paths // TODO: @minikin](#do-import-all-files-within-a-package-using-relative-paths--todo-minikin)
+    - [DO import all files within a package using relative paths](#do-import-all-files-within-a-package-using-relative-paths)
     - [DO use namespacing.](#do-use-namespacing)
     - [PREFER to use `show`.](#prefer-to-use-show)
     - [DON'T do useful work in assert statements.](#dont-do-useful-work-in-assert-statements)
     - [PREFER to use `const` over `final` over `var`.](#prefer-to-use-const-over-final-over-var)
     - [AVOID mixing named and positional parameters.](#avoid-mixing-named-and-positional-parameters)
+    - [Avoid using var and dynamic](#avoid-using-var-and-dynamic)
+    - [Employ asserts generously to identify contract breaches and confirm invariants.](#employ-asserts-generously-to-identify-contract-breaches-and-confirm-invariants)
+    - [Minimize the visibility scope of constants](#minimize-the-visibility-scope-of-constants)
+    - [Avoid using if chains or ?: or == with enum values](#avoid-using-if-chains-or--or--with-enum-values)
+    - [Avoid checking the availability of a port prior to using it, refrain from adding timeouts, and steer clear of other race conditions.](#avoid-checking-the-availability-of-a-port-prior-to-using-it-refrain-from-adding-timeouts-and-steer-clear-of-other-race-conditions)
+    - [Avoid using numbers that are vague or seem random without providing a clear explanation or justification for their use.](#avoid-using-numbers-that-are-vague-or-seem-random-without-providing-a-clear-explanation-or-justification-for-their-use)
+    - [Common boilerplates for operator == and hashCode](#common-boilerplates-for-operator--and-hashcode)
+    - [Override toString](#override-tostring)
 
 ## Additional Style Rules
 
@@ -118,11 +126,12 @@ export 'src/veggies.dart' show Tomato;
 import 'package:plants/botanical_fruits.dart' show Orange;
 ```
 
-### DO import all files within a package using relative paths // TODO: @minikin
+### DO import all files within a package using relative paths
 
-Mixing and matching relative and absolute paths within a single package causes Dart to act as if there were two separate imports of identical files,
+Mixing and matching relative and absolute paths within a single package causes Dart 
+to act as if there were two separate imports of identical files,
 which will introduce errors in typechecking.
-Either format works as long as it is consistent. 
+Either format works as long as it is consistent.
 Within the Catalyst repositories, relative paths are used.
 
 This does not apply to external libraries, as only the absolute path can be used.
@@ -193,12 +202,172 @@ import 'package:flutter/material.dart show Container, Row, Column, Padding,
 Code inside assert statements are not executed in production code.
 Asserts should only check conditions and be side-effect free.
 
-
 ### PREFER to use `const` over `final` over `var`.
 
 This minimizes the mutability for each member or local variable.
 
-
 ### AVOID mixing named and positional parameters.
 
 Instead, `required` should be used in place of required positional parameters.
+
+### Avoid using var and dynamic
+
+All variables and arguments should have specified types;
+avoid using `dynamic` or `Object` when the actual type can be determined.
+
+Ensure to specify generic types whenever possible.
+Explicitly type all list and map literals and provide types for all parameters,
+including in closures, regardless of parameter usage.
+
+This serves dual purposes: it confirms the compiler-inferred type aligns with
+the anticipated type and renders the code self-explanatory when the type isn't apparent
+(e.g., during non-constructor calls).
+
+Always avoid `var` and `dynamic`.
+If the type is undetermined, favor using `Object` (or `Object?`) and
+perform casting since utilizing dynamic bypasses all static checking.
+
+### Employ asserts generously to identify contract breaches and confirm invariants.
+
+The `assert()` function aids in maintaining correctness without affecting performance in release mode,
+as Dart evaluates asserts only in debug mode.
+
+It's utilized to check that contracts and invariants align with expectations.
+While asserts don’t enforce contracts in release builds,
+they are useful in scenarios where a false condition indicates a bug in the code.
+
+The following example is from [firestore.dart](https://github.com/firebase/flutterfire/blob/679beaa3fc3b4182597b83f39bcc9c5649e5722a/packages/cloud_firestore/cloud_firestore/lib/src/firestore.dart#L73):
+
+```dart
+  CollectionReference<Map<String, dynamic>> collection(String collectionPath) {
+    assert(
+      collectionPath.isNotEmpty,
+      'a collectionPath path must be a non-empty string',
+    );
+    assert(
+      !collectionPath.contains('//'),
+      'a collection path must not contain "//"',
+    );
+    assert(
+      isValidCollectionPath(collectionPath),
+      'a collection path must point to a valid collection.',
+    );
+
+    return _JsonCollectionReference(this, _delegate.collection(collectionPath));
+  }
+```
+
+### Minimize the visibility scope of constants
+
+Prefer using a local const or a static const in a relevant class than using a global constant.
+
+As a general rule, when you have a lot of constants, wrap them in a class.
+
+For examples of this:
+
+```dart
+class MaterialAccentColor extends ColorSwatch<int> {
+  /// Creates a color swatch with a variety of shades appropriate for accent
+  /// colors.
+  const MaterialAccentColor(super.primary, super.swatch);
+
+  /// The lightest shade.
+  Color get shade100 => this[100]!;
+
+  /// The default shade.
+  Color get shade200 => this[200]!;
+
+  /// The second darkest shade.
+  Color get shade400 => this[400]!;
+
+  /// The darkest shade.
+  Color get shade700 => this[700]!;
+}
+```
+
+### Avoid using if chains or ?: or == with enum values
+
+Use `switch` with no default case if you are examining an `enum`,
+since the analyzer will warn you if you missed any of the values when you use switch.
+The `default` case should be avoided so that the analyzer will complain if a value is missing.
+Unused values can be grouped together with a single `break` or `return` as appropriate.
+
+Avoid using `if` chains, `? …​ : …​,` or, in general, any expressions involving enums.
+
+### Avoid checking the availability of a port prior to using it, refrain from adding timeouts, and steer clear of other race conditions.
+
+If you look for an available port, then try to open it,
+some other code will likely open that port between your check and when you open the port, and that will cause failure.
+
+>Instead, have the code that opens the port pick an available port and return it rather than being given a (supposedly) available port.
+
+If you have a timeout, then it's very likely that some other code will happen to run while your timeout is running,
+and your "really conservative" timeout will trigger even though it would have worked fine if the timeout was one second longer, and that will cause a failure.
+
+>Instead, have the code that would time out display a message saying that things are unexpectedly taking a long time so that someone interactively using the tool can see that something is fishy. Still, an automated system won't be affected. -->
+
+Race conditions like this are the primary cause of flaky tests, which waste everyone's time.
+
+Similarly, avoid delays or sleeps that are intended to coincide with how long something takes.
+You may think that waiting two seconds is okay because it usually takes 10ms, but several times a week,
+your 10ms task will take 2045ms, and your test will fail because waiting two seconds wasn't long enough.
+
+>Instead, wait for a triggering event.
+
+### Avoid using numbers that are vague or seem random without providing a clear explanation or justification for their use.
+
+Numbers in tests and elsewhere should be clearly understandable.
+When the provenance of a number is not obvious, consider either leaving the expression or
+adding a clear comment (bonus points for leaving a diagram).
+
+```dart
+// BAD
+expect(rect.left, 4.24264068712);
+
+// GOOD
+expect(rect.left, 3.0 * math.sqrt(2));
+```
+
+### Common boilerplates for operator == and hashCode
+
+We have many classes that override operator `==` and hashCode ("value classes").
+To keep the code consistent, we use the following style for these methods:
+
+```dart
+@override
+bool operator ==(Object other) {
+  if (other.runtimeType != runtimeType) {
+    return false;
+  }
+  return other is Foo
+      && other.bar == bar
+      && other.baz == baz
+      && other.quux == quux;
+}
+
+@override
+int get hashCode => Object.hash(bar, baz, quux);
+```
+For objects with a lot of properties, consider adding the following at the top of the operator `==`:
+
+```dart
+  if (identical(other, this)) {
+    return true;
+  }
+```
+
+In general, consider carefully whether overriding operator `==` is a good idea.
+It can be expensive, especially if the properties it compares are themselves comparable with a custom operator `==`.
+If you do override equality, you should use `@immutable` on the class hierarchy.
+
+### Override toString
+
+For trivial classes, override toString as follows, to aid in debugging:
+
+```dart
+@override
+String toString() => '${objectRuntimeType(this, 'NameOfObject')}($bar, $baz, $quux)';
+```
+
+ **Avoid** using `$runtimeType`, since it adds a non-trivial cost even in release and profile mode.
+ The `objectRuntimeType` method handles this for you, falling back to a supplied constant string when asserts are disabled.
