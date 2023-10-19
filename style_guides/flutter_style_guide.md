@@ -192,7 +192,6 @@ In this example:
 By specifying `const`, we're telling Flutter that these widgets will never change and can be reused across builds,
 optimizing the performance of our app.
 
-
 ## DON'T use runtimeType for type checking
 
 `RuntimeType` is only for debugging purposes and the application code shouldn't depend on it.
@@ -251,8 +250,6 @@ void initState() {
   // DO STUFF
 }
 ```
-
----
 
 `super.dispose()` should always be the last line in your dispose method.
 
@@ -455,12 +452,10 @@ Treating warnings as errors in a software development project can be a highly be
 - Warnings are often indicative of potential problems in the code. By treating warnings as errors,
 developers are forced to address these issues early on, which can prevent bugs from manifesting later.
 
-
 **Code Quality:**
 
 This practice encourages cleaner, more robust code by ensuring that developers address not only blatant errors 
 but also other suboptimal coding practices that might generate warnings.
-
 
 **Maintainability:**
 
@@ -470,7 +465,6 @@ Addressing warnings promptly keeps the codebase tidy and reduces technical debt.
 **Consistency:**
 
 Enforcing a policy where warnings are treated as errors can lead to more consistent coding practices across a development team.
-
 
 **Education and Awareness:**
 
