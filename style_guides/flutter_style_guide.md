@@ -9,6 +9,7 @@
   - [Prefer Object over dynamic](#prefer-object-over-dynamic)
   - [DO use SizedBox instead of Container](#do-use-sizedbox-instead-of-container)
   - [DO use itemExtent in ListView for long lists](#do-use-itemextent-in-listview-for-long-lists)
+  - [DO use if condition instead of ternary operator syntax when you need render widget conditionally](#do-use-if-condition-instead-of-ternary-operator-syntax-when-you-need-render-widget-conditionally)
   - [StatefulWidget: When to call super.initState() and super.dispose()?](#statefulwidget-when-to-call-superinitstate-and-superdispose)
   - [DO always close streams when you are done with them](#do-always-close-streams-when-you-are-done-with-them)
   - [DO always dispose of AnimationControllers when you are done with them](#do-always-dispose-of-animationcontrollers-when-you-are-done-with-them)
@@ -236,6 +237,47 @@ A dynamic method invocation may be slower because the run-time system must add e
 
 ## DO use itemExtent in ListView for long lists
 
+
+## DO use if condition instead of ternary operator syntax when you need render widget conditionally
+
+In the process of laying out a Flutter app, there are often scenarios where rendering different widgets conditionally is required.
+For instance, you might need to generate a widget based on the platform:
+
+```dart
+Row(
+  children: [
+    Text('Platform'),
+    Platform.isAndroid ? Text('Android') : SizeBox(),
+    Platform.isIOS ? Text('iOS') : SizeBox(),
+  ]
+);
+```
+
+In this scenario, you can forego the ternary operator and take advantage of Dart's inherent syntax to incorporate an `if` statement within an array:
+
+```dart
+Row(
+  children: [
+    Text('Platform'),
+    if (Platform.isAndroid) Text('Android'),
+    if (Platform.isIOS) Text('iOS'),
+  ]
+);
+```
+You can also extend this functionality using a spread operator to load multiple widgets as required:
+
+```dart
+Row(
+  children: [
+    Text('Platform'),
+    if (Platform.isAndroid) Text('Android'),
+    if (Platform.isIOS) ...[
+      Text('Text 1'),
+      Text('Text 2'),
+    ],
+  ]
+);
+```
 
 ## StatefulWidget: When to call super.initState() and super.dispose()?
 
