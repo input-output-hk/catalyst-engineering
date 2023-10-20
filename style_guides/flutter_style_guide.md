@@ -11,6 +11,7 @@
   - [StatefulWidget: When to call super.initState() and super.dispose()?](#statefulwidget-when-to-call-superinitstate-and-superdispose)
   - [DO always close streams when you are done with them](#do-always-close-streams-when-you-are-done-with-them)
   - [DO always dispose of AnimationControllers when you are done with them](#do-always-dispose-of-animationcontrollers-when-you-are-done-with-them)
+    - [Disposing `AnimationController` Instances in Flutter](#disposing-animationcontroller-instances-in-flutter)
   - [DO always dispose of ScrollControllers when you are done with them](#do-always-dispose-of-scrollcontrollers-when-you-are-done-with-them)
   - [Common constants approach](#common-constants-approach)
   - [DO Avoiding large trees of widgets](#do-avoiding-large-trees-of-widgets)
@@ -237,14 +238,118 @@ A dynamic method invocation may be slower because the run-time system must add e
 
 ## DO use SizedBox instead of Container
 
+In Flutter, both the `SizedBox` and `Container` widgets can be utilized to set the dimensions of a child widget.
+However, when the sole intention is to specify a fixed width and/or height, it's often more straightforward and expressive to use `SizedBox` instead of `Container`. 
 
+Here are the key points concerning this guidance:
 
+**Expressive Clarity:**
+
+The SizedBox widget is explicit in its purpose— to provide fixed dimensions.
+Using SizedBox makes it clear to other developers that the goal is to specify dimensions.
+
+**Simplicity:**
+
+SizedBox is a simpler widget with fewer properties compared to Container,
+making it a more direct choice when the only requirement is to set dimensions.
+
+**Performance:**
+Although the performance difference might be negligible,
+using a simpler widget could be slightly more performant since it has fewer properties and thus a smaller footprint.
+
+**Code Conciseness:**
+SizedBox offers a more concise way to specify dimensions when you don’t need the additional capabilities of Container.
+
+Example:
+
+```dart
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        body: Center(
+          // Using SizedBox to specify dimensions
+          child: SizedBox(
+            width: 100.0,
+            height: 100.0,
+            child: FlutterLogo(),
+          ),
+        ),
+      ),
+    );
+  }
+}
+```
+
+By employing `SizedBox` when the task is merely to assign fixed dimensions,
+you adhere to a practice that promotes code simplicity and readability.
 
 ## DO use prototypeItem in ListView for long lists
 
+When dealing with long lists, utilizing the [prototypeItem](https://api.flutter.dev/flutter/widgets/ListView/prototypeItem.html) property in ListView can be beneficial.
+This property allows Flutter to measure the dimensions of list items without having to inflate them all,
+which can lead to performance optimizations.
 
+Here's a breakdown of this guidance:
 
+**Performance Optimization:**
+By providing a prototypeItem, Flutter can efficiently measure item dimensions,
+which is particularly useful for long lists where inflating all items can be performance-intensive.
 
+**Consistency:**
+When all items in the list have uniform dimensions,
+specifying a prototypeItem ensures that Flutter has a consistent size to work with, optimizing layout calculations.
+
+**Resource Efficiency:**
+It can save resources as the framework doesn't have to create and dispose of widgets just to measure them.
+
+Example:
+
+```dart
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        body: ListView.builder(
+          itemCount: 1000,
+          itemBuilder: (context, index) {
+            return ListTile(
+              title: Text('Item #$index'),
+            );
+          },
+          prototypeItem: const ListTile(
+            title: Text(''),
+          ),
+        ),
+      ),
+    );
+  }
+}
+```
+
+In this example:
+
+- A `ListView.builder` is used to create a long list of 1000 items.
+- The prototypeItem property is set to a `ListTile` widget, which serves as a prototype for measuring the dimensions of list items.
+- This usage allows Flutter to efficiently calculate item dimensions without having to inflate every item,
+which can lead to performance improvements, especially in cases of long lists.
+
+Utilizing the `prototypeItem` property in `ListView` when dealing with long lists is a good practice for optimizing performance and
+ensuring resource efficiency in your Flutter applications.
 
 ## DO use if condition instead of ternary operator syntax when you need render widget conditionally
 
@@ -382,12 +487,91 @@ process the input, and finally call `dispose` to clean up the resources when we'
 
 ## DO always dispose of AnimationControllers when you are done with them
 
+---
 
+### Disposing `AnimationController` Instances in Flutter
 
+In Flutter, `AnimationController`s are used to drive animations.
+However, they consume system resources and hence it is crucial to dispose of them once they are no longer needed.
+ Below are some key points and an example illustrating this practice:
 
+**Resource Management**:
+Disposing of `AnimationController` instances when they are no longer needed helps in
+freeing up system resources which can lead to better performance.
 
+**Preventing Memory Leaks**:
+If `AnimationController`s are not disposed of,
+they can cause memory leaks which may degrade the performance of the application over time.
 
+**Adhering to Best Practices**:
+Properly managing resources by disposing of objects like `AnimationController` is a good programming practice in Flutter,
+making your code more robust and maintainable.
 
+**Example**:
+
+```dart
+import 'package:flutter/material.dart';
+
+void main() => runApp(MyApp());
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: MyHomePage(),
+    );
+  }
+}
+
+class MyHomePage extends StatefulWidget {
+  @override
+  _MyHomePageState createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
+  AnimationController _animationController;
+
+  @override
+  void initState() {
+    super.initState();
+    _animationController = AnimationController(
+      vsync: this,
+      duration: Duration(seconds: 2),
+    );
+  }
+
+  @override
+  void dispose() {
+    _animationController.dispose();  // Disposing of the AnimationController
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Animation Example'),
+      ),
+      body: Center(
+        child: FadeTransition(
+          opacity: _animationController,
+          child: const FlutterLogo(size: 100.0),
+        ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          _animationController.forward();
+        },
+        child: Icon(Icons.play_arrow),
+      ),
+    );
+  }
+}
+```
+
+By properly disposing of the AnimationController,
+you ensure that the system resources are freed up when they are no longer needed,
+adhering to good resource management practices in Flutter.
 
 ## DO always dispose of ScrollControllers when you are done with them
 
