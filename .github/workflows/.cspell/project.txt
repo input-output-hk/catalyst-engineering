@@ -1,5 +1,6 @@
 1000
 blocksync
+boilerplates
 chainsyn
 cherrypick
 cherrypicks
@@ -7,6 +8,7 @@ cip
 cip15
 Codebases
 Codelabs
+firestore
 Hotfixes
 mainnet
 mdbooks
