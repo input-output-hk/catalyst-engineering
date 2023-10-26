@@ -9,11 +9,6 @@
     - [Engineering Directory](#engineering-directory)
     - [Repositories](#repositories)
     - [Learning Resources](#learning-resources)
-    - [Nix](#nix)
-  - [Infrastructure](#infrastructure)
-    - [Environment](#environment)
-  - [Testing](#testing)
-    - [How to QA](#how-to-qa)
   - [Support](#support)
   - [License](#license)
 
@@ -59,16 +54,6 @@
 - [Dart](learning_resources/dart.md)
 - [Flutter](learning_resources/flutter.md)
 - [Rust](learning_resources/rust.md)
-
-### Nix
-
-## Infrastructure
-
-### Environment
-
-## Testing
-
-### How to QA
 
 ## Support
 
