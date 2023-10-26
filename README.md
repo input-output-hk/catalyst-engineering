@@ -22,6 +22,7 @@
 - [Release Policy](guides_and_processes/release_policy.md)
 - [Development Lifecycle](guides_and_processes/development_lifecycle.md)
 - [Code Reviews](guides_and_processes/code_reviews.md)
+- [On-Call Policy](guides_and_processes/on_call_policy.md)
 
 ### Style Guides
 
