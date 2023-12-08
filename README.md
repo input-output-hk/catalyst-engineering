@@ -55,6 +55,7 @@
 - [Dart](learning_resources/dart.md)
 - [Flutter](learning_resources/flutter.md)
 - [Rust](learning_resources/rust.md)
+- [Blockchain](learning_resources/blockchain.md)
 
 ## Support
 
