@@ -21,3 +21,7 @@ rustdoc
 rxdart
 surrealdb
 testnet
+Polkadot
+sidechains
+sidechain
+Tendermint
