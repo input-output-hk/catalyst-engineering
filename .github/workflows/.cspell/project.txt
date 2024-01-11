@@ -1,6 +1,8 @@
 1000
 blocksync
 boilerplates
+Bootcamp
+Chainlink's
 chainsyn
 cherrypick
 cherrypicks
@@ -16,12 +18,12 @@ miniprotocolss
 mitigations
 namespacing
 nextest
+Polkadot
 rustc
 rustdoc
 rxdart
-surrealdb
-testnet
-Polkadot
-sidechains
 sidechain
+sidechains
+surrealdb
 Tendermint
+testnet
