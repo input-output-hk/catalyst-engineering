@@ -34,21 +34,12 @@
 
 ### Repositories
 
-**Public**
-
-- [⚙️ Core Catalyst Governance Engine and utilities](https://github.com/input-output-hk/catalyst-core)
+- [All things engineering: processes, best practices, setup guides, and more!](https://github.com/input-output-hk/catalyst-engineering)
+- [Catalyst CI](https://github.com/input-output-hk/catalyst-ci)
+- [Catalyst Voices](https://github.com/input-output-hk/catalyst-voices)
+- [Hermes](https://github.com/input-output-hk/hermes)
+- [Core Catalyst Governance Engine and utilities](https://github.com/input-output-hk/catalyst-core)
 - [Custom GH Action to speed up and simplify building mdbooks for the Catalyst project.](https://github.com/input-output-hk/catalyst-gh-tools)
-- [📚 All things engineering: processes, best practices, setup guides, and more!](https://github.com/input-output-hk/catalyst-engineering)
-- [🗳️ A collection of Catalyst plugins for Flutter and Dart.](https://github.com/input-output-hk/catalyst_flutter)
-
-**Private**
-
-- [Clean workspace to develop new Catalyst Core components](https://github.com/input-output-hk/catalyst-core-neo)
-- [GVC](https://github.com/input-output-hk/gvc)
-- [Repository for catalyst related static files and configuration](https://github.com/input-output-hk/catalyst-resources)
-- [🧪 Catalyst Unified Platform is an Android, iOS, and Web application built with Flutter](https://github.com/input-output-hk/catalyst_unified_platform)
-- [CUP iOS Code Signing](https://github.com/input-output-hk/cup-ios-codesigning)
-- [Voting App](https://github.com/input-output-hk/norns)
 
 ### Learning Resources
 
