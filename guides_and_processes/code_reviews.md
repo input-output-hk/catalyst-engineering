@@ -13,7 +13,6 @@
     - [Why Should Code Reviews Be Fast?](#why-should-code-reviews-be-fast)
     - [How Fast Should Code Reviews Be?](#how-fast-should-code-reviews-be)
 
-
 ## Introduction
 
 A code review is a process where someone other than the author(s) of a piece of code examines that code.
@@ -34,46 +33,53 @@ Make sure your commit messages are descriptive.
 
 Make sure PR title is [conventional](https://www.conventionalcommits.org/en/v1.0.0/#specification):
 
-`feat:[JIRA-TICKET]/[GitHub-TICKET] Short description of the PR`
+`feat:Short description of the PR`
 
-`refactor:[JIRA-TICKET]/[GitHub-TICKET] Short description of the PR`
+`refactor:Short description of the PR`
 
-`ci:[JIRA-TICKET]/[GitHub-TICKET] Short description of the PR`
+`ci: Short description of the PR`
 
 #### PR description example
 ```md
-## Proposed changes
+# Description
 
-Describe the big picture of your changes here to communicate to the maintainers 
-why we should accept this pull request. If it fixes a bug or resolves a feature request, 
-be sure to link to that issue.
+Thanks for contributing to the project!
+Please fill out this template to help us review your changes.
 
-## Types of changes
+## Related Issue(s)
 
-What types of changes does your code introduce?
-_Put an `x` in the boxes that apply_
+List the issue numbers related to this pull request.
 
-- [ ] Bugfix (non-breaking change which fixes an issue)
-- [ ] New feature (non-breaking change which adds functionality)
-- [ ] Breaking change (fix or feature that would cause existing functionality to not work as expected)
-- [ ] Documentation Update (if none of the other choices apply)
+> e.g., Closes #123, Resolves #456  Fixes #367
 
-## Checklist
+## Description of Changes
 
-_Put an `x` in the boxes that apply. 
-You can also fill these out after creating the PR. 
-If you're unsure about any of them, don't hesitate to ask. We're here to help! 
-This is simply a reminder of what we are going to look for before merging your code._
+Provide a clear and concise description of what the pull request changes.
 
-- [ ] Lint and unit tests pass locally with my changes
-- [ ] I have added tests that prove my fix is effective or that my feature works
-- [ ] I have added necessary documentation (if appropriate)
-- [ ] Any dependent changes have been merged and published in downstream modules
+## Breaking Changes
 
-## Further comments
+Describe any breaking changes and the impact.
 
-If this is a relatively large or complex change,
-kick off the discussion by explaining why you chose the solution you did and what alternatives you considered, etc...
+## Screenshots
+
+If applicable, add screenshots to help explain your changes.
+
+## Related Pull Requests
+
+If applicable, list any related pull requests.
+
+> e.g., #123, #456
+
+## Please confirm the following checks
+
+* [ ] My code follows the style guidelines of this project
+* [ ] I have performed a self-review of my code
+* [ ] I have commented my code, particularly in hard-to-understand areas
+* [ ] I have made corresponding changes to the documentation
+* [ ] My changes generate no new warnings
+* [ ] I have added tests that prove my fix is effective or that my feature works
+* [ ] New and existing unit tests pass locally with my changes
+* [ ] Any dependent changes have been merged and published in downstream module
 ```
 
 ## Performing Code Reviews
