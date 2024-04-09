@@ -4,6 +4,7 @@
   - [DON'T use functions which return widgets](#dont-use-functions-which-return-widgets)
   - [DO use const widgets where possible](#do-use-const-widgets-where-possible)
   - [DON'T use runtimeType for type checking](#dont-use-runtimetype-for-type-checking)
+  - [DON'T subscribe to all MediaQuery changes](#dont-subscribe-to-all-mediaquery-changes)
   - [Prefer Object over dynamic](#prefer-object-over-dynamic)
   - [DO use SizedBox instead of Container](#do-use-sizedbox-instead-of-container)
   - [DO use prototypeItem in ListView for long lists](#do-use-prototypeitem-in-listview-for-long-lists)
@@ -206,6 +207,25 @@ main() {
   final foo = Foo();
   if (foo is Foo) {
     print('it's a foo!');
+  }
+}
+```
+
+## DON'T subscribe to all MediaQuery changes
+
+`MediaQuery` provides access to many aspects of the platform the Flutter app is running on. Querying using MediaQuery.of will cause your widget to rebuild automatically whenever any field of the MediaQueryData changes (e.g., if the user rotates their device). However most use cases require rebuilding your widget only when a single property changes, such as the window size when a user resizes the browser. Therefore, unless you are concerned with the entire MediaQueryData object changing, prefer using the specific methods (for example: MediaQuery.sizeOf and MediaQuery.paddingOf), as it will rebuild more efficiently.
+
+```dart
+class MyWidget extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      // DON'T:
+      width: MediaQuery.of(context).size.width * 0.5,
+
+      // DO:
+      width: MediaQuery.sizeOf(context).width * 0.5,
+    )
   }
 }
 ```
