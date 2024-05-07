@@ -3,6 +3,7 @@
 - [Ownership Policy for Software Engineers](#ownership-policy-for-software-engineers)
   - [Jira/GitHub Ticket](#jiragithub-ticket)
   - [GitHub PR](#github-pr)
+  - [GitHub Issue State](#github-issue-state)
   - [Handover of Ownership](#handover-of-ownership)
 
 At our organization, we believe in empowering our software engineers to take ownership of the work they do.
@@ -10,7 +11,8 @@ This ownership policy outlines the guidelines for software engineers with regard
 
 ## Jira/GitHub Ticket
 
-When a Jira/GitHub ticket is assigned to you, you become the owner of that ticket until it is marked as "done" or "closed."
+When a Jira/GitHub ticket is assigned to you, you become the owner of that ticket
+until it is marked as "done" or "closed."
 
 As the owner of the ticket, you are responsible for:
 
@@ -29,8 +31,9 @@ As the owner of the ticket, you are responsible for:
 When a GitHub pull request is created, the author of the pull request becomes the owner of that code until it is merged into the main branch.
 As the owner of the pull request, you are responsible for:
 
-* We encourage the use of the [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) format for PR titles and commit messages.
-* PR title should be in the format: `feat: JIRA-1234: Title of the PR`
+* We encourage the use of the [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/)
+format for PR titles and commit messages.
+* PR title should pass conventional commit linting.
 * Providing a clear description of the changes made and the purpose of the code
 * Assign yourself as the PR owner
 * Assigning the appropriate reviewers to the PR
@@ -41,12 +44,29 @@ As the owner of the pull request, you are responsible for:
 Once the pull request is merged, ownership of the code is transferred to the team as a whole,
 and any further changes or updates will be managed through the Jira/GitHub ticket process.
 
+## GitHub Issue State
+
+GitHub issues should be used to track bugs, enhancements,
+tasks or any other work items for a [project](https://github.com/orgs/input-output-hk/projects/102/views/2).
+The state of an issue indicates its current status in the development process.
+
+- **New**: A new issue that has been created but not yet triaged or assigned.
+- 📋 **Backlog**: An issue that has been triaged and is ready to be worked on, but not yet assigned to a developer.
+- 🔖 **Ready**: An issue that has been assigned to a developer and is ready to be worked on.
+- 🏗 **In progress**: An issue that is currently being worked on by a developer.
+- 👀 **In review**: An issue that has been completed by a developer and is awaiting review.
+- 🔬 **Ready For QA**: An issue that has been reviewed, merged and is ready for testing by the QA team.
+- ✅ **Done**: An issue that has been completed and closed.
+- 🛑 **Blocked** An issue that cannot be progressed due to a blocker or dependency.
+
 ## Handover of Ownership
 
-Software engineers may need to handover ticket or PR ownership for various reasons, such as taking a break, leaving the organization, or workload management.
+Software engineers may need to handover ticket or PR ownership for various reasons,
+such as taking a break, leaving the organization, or workload management.
 
 **In such cases, the following guidelines must be followed:**
 
 * The engineer must inform the team lead or manager in advance and provide relevant context and documentation.
-* The handover should be done in a structured manner, including a handover document that outlines the status, next steps, and any pending work.
+* The handover should be done in a structured manner, including a handover document that outlines the status,
+next steps, and any pending work.
 * The new owner should be given sufficient time and resources to familiarize themselves with the ticket or PR.
