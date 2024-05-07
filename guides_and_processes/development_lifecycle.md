@@ -12,8 +12,8 @@
 ## Create a branch of the `master` or `main`
 
 - In our team, we follow [GitHub Flow](https://docs.github.com/en/get-started/quickstart/github-flow) branch model.
-- Name the branch with task Jira/GitHub id and short description: `feature/npg-884-finalize-api-approach`
-In case of the bug: `bugfix/npg-999-fix-api-error`
+- Name the branch with task GitHub id and short description: `feature/884-finalize-api-approach`
+In case of the bug: `bugfix/999-fix-api-error`
 
 ## Writing code
 
@@ -23,7 +23,9 @@ In case of the bug: `bugfix/npg-999-fix-api-error`
 
 ## Create a pull request on GitHub
 
-- Include the Jira/GitHub task link in your PR description. Read more about [GitHub PR](https://github.com/input-output-hk/catalyst-engineering/blob/main/guides_and_processes/ownership.md#github-pr).
+- In PR description mention the issue which it resolves, e.g. `resolve #884`.
+See [this](https://docs.github.com/en/issues/tracking-your-work-with-issues/linking-a-pull-request-to-an-issue) for more details.
+Read more about [GitHub PR](https://github.com/input-output-hk/catalyst-engineering/blob/main/guides_and_processes/ownership.md#github-pr).
 - In case it’s possible visually to demonstrate your work, attach images or video.
 
 ## Submit for review
