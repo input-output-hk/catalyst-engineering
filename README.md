@@ -23,7 +23,7 @@
 - [Development Lifecycle](guides_and_processes/development_lifecycle.md)
 - [Code Reviews](guides_and_processes/code_reviews.md)
 - [On-Call Policy](guides_and_processes/on_call_policy.md)
-- [Issue Policy](guides_and_processes/issue_policyy.md)
+- [Issue Policy](guides_and_processes/issue_policy.md)
 
 ### Style Guides
 
