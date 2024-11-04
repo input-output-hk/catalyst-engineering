@@ -31,3 +31,8 @@ Read more about [GitHub PR](https://github.com/input-output-hk/catalyst-engineer
 ## Submit for review
 
 Assign the task to the appropriate reviewer.
+
+## Merge approved PR
+
+- merge PR after it's approved
+- set item status as 'Ready for QA'
