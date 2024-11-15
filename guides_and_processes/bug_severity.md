@@ -1,20 +1,14 @@
-# Bugs Severity
+# Bug Severity
 
-- [Bugs Severity](#bugs-severity)
-  - [Purpose](#purpose)
-  - [Scope](#scope)
-  - [Urgent](#urgent)
-  - [High](#high)
-  - [Medium](#medium)
-  - [Low](#low)
+- [Purpose](#purpose)
+- [Critical](#critical)
+- [High](#high)
+- [Medium](#medium)
+- [Low](#low)
 
 ## Purpose
 
-This policy outlines the guidelines for classifying the severity of bugs found by the Catalyst Team
-
-## Scope
-
-This policy applies to all members of the Catalyst Engineering team involved in the development and maintenance.
+This policy outlines the criteria for classifying the severity of bugs identified by the Catalyst Team. Once a bug report is submitted, the appropriate severity level should be assigned in collaboration with the relevant stakeholders. For critical or high-severity bugs, the issue should be raised and discussed during the daily meeting.
 
 ## Critical
 
