@@ -2,9 +2,9 @@
 
 - [Purpose](#purpose)
 - [Critical](#critical)
-- [High](#high)
-- [Medium](#medium)
-- [Low](#low)
+- [High Severity](#high-severity)
+- [Medium Severity](#medium-severity)
+- [Low Severity](#low-severity)
 
 ## Purpose
 
@@ -21,8 +21,7 @@ Examples of critical bugs include:
 3. **Security vulnerabilities** – Bugs that expose the application or system to attacks, such as SQL injection, cross-site scripting (XSS), or unauthorized access, which could compromise sensitive data or lead to a breach.
 4. **Inability to perform critical functions** – A bug that disables core functions of the software, such as a payment processing system failing during a transaction, or login functionality being broken, prevents users from completing vital actions.
 
-
-## High
+## High Severity
 
 A **high-priority bug** is an issue that significantly affects the functionality, usability, or performance of a system but does not necessarily cause a complete failure.
 
@@ -34,7 +33,7 @@ Examples of high-priority bugs include:
 4. **Cross-platform issues** – Bugs that impact how a system behaves on certain devices or browsers, especially if the system is intended to work across a wide range of platforms, can prevent a significant portion of users from accessing the service properly.
 
 
-## Medium
+## Medium Severity
 
 A **medium-severity bug** is an issue that affects the functionality or usability of a system but does not cause a critical failure or severely disrupt the user experience.
 
@@ -45,8 +44,7 @@ Examples of medium-severity bugs include:
 3. **Performance issues** – Slower load times or performance degradation in certain non-critical areas that don’t render the system unusable but can detract from the overall user experience.
 4. **Inconsistent behavior** – Features that work differently in some cases but are still functional, such as a button not responding on one browser but working fine on another.
 
-
-## Low
+## Low Severity
 
 A **low-severity bug** is an issue in the software that has minimal impact on the functionality or user experience.
 
