@@ -18,7 +18,7 @@
 
 ## Daily Meetings
 
-### Team Standups
+### Team Standup
 - **Attendees:** Individual Engineering Teams
 - **Purpose:**
   - Quick update on daily progress
@@ -44,7 +44,7 @@
 - **Attendees:** Engineering Managers, Product Manager
 - **Purpose:**
   - Prioritize and refine the backlog
-  - Ensure alignment between engineering and product roadmaps
+  - Ensure alignment between engineering and product roadmap
 
 ### Engineering Management Meeting
 - **Attendees:** Engineering Managers

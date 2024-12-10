@@ -23,7 +23,7 @@
    - Keep the PR updated with your latest changes
 
 3. **Monitor Tags**
-   - Watch for `PR Walkthrough` tags on your PR
+   - Watch for `PR Walk-through` tags on your PR
    - These tags indicate a need for additional review steps
 
 ### What to Expect
@@ -32,18 +32,18 @@
 - Daily review of draft PRs
 - Focus on requirement alignment
 - Direct communication with developers via Slack if issues are found
-- May tag PRs requiring walkthroughs
+- May tag PRs requiring walk-throughs
 
 #### Developer Role
 - Focus reviews on "Ready" PRs, not drafts
-- If PR is tagged for walkthrough:
+- If PR is tagged for walk-through:
   - Schedule 1:1 with a peer when PR is ready
-  - Conduct live code walkthrough
+  - Conduct live code walk-through
 
 #### Review Guidelines
 - Small PRs (1 day or less of work) can skip draft stage
 - Other team members should focus on reviewing PRs marked as ready
-- Tagged PRs require peer walkthrough before final review
+- Tagged PRs require peer walk-through before final review
 
 ### Expected Outcomes
 
@@ -104,4 +104,4 @@ PRs that can be completed in one day or less may proceed directly to review with
 - More efficient use of engineering management time by:
   - Combining grooming and prioritization
   - Improving epic/issue quality before team presentation
-  - Streamlining communication processes 
+  - Streamlining communication processes
