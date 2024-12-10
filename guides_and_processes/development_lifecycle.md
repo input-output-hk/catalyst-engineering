@@ -8,6 +8,7 @@
   - [Writing code](#writing-code)
   - [Create a pull request on GitHub](#create-a-pull-request-on-github)
   - [Submit for review](#submit-for-review)
+  - [Merge approved PR](#merge-approved-pr)
 
 ## Create a branch of the `master` or `main`
 

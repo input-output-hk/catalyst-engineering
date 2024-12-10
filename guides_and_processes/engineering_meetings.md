@@ -6,7 +6,7 @@ The following is a list of the current recurring development team meetings, thei
   - [Meetings](#meetings)
   - [Summary](#summary)
   - [Standup (Daily, ~15 min)](#standup-daily-15-min)
-    - [Notes for engineers:](#notes-for-engineers)
+    - [Notes for engineers](#notes-for-engineers)
   - [Sprint Demo (End of Sprint)](#sprint-demo-end-of-sprint)
   - [Sprint Retro (End of Sprint)](#sprint-retro-end-of-sprint)
   - [Sprint Planning (Start of Sprint)](#sprint-planning-start-of-sprint)
@@ -19,7 +19,7 @@ The following is a list of the current recurring development team meetings, thei
 
 Meeting matrix for roles, note this is just a high level guide, attendance at meetings is determined by the role of each engineer.
 
-| Meeting                       | Architects         | Product Owner        | Eng. Manager         | Backend Devs            | Frontend Devs           | Designers                           | Design Manager                      | Testers/QA                         | SRE             | Operations       |
+| Meeting                       | Architects         | Product Owner        | Eng. Manager         | Backend Developers            | Frontend Developers           | Designers                           | Design Manager                      | Testers/QA                         | SRE             | Operations       |
 |-------------------------------|--------------------|----------------------|----------------------|-------------------------|-------------------------|--------------------------------------|-------------------------------------|-------------------------------------|-----------------|-----------------|
 | Standup (Mon-Thu)             | X                  | (Optional)           | X                    | X                       | X                       | (Optional)                           | (Optional)                          | (Optional)                          | (Optional)      | (Optional)      |
 | Sprint Demo (End of Sprint)   | X                  | X                    | X                    | X                       | X                       | (Recommended)                        | (Recommended)                       | (Recommended)                       | (Recommended)    | (Recommended)    |
@@ -62,7 +62,7 @@ This matrix provides a high-level guideline. Actual attendance may vary dependin
 - Monday - Thursday (no standup on fridays).
 
 
-#### Notes for engineers:
+#### Notes for engineers
 
 During the daily standup each engineer should answer the following questions, try not to deviate from these to keep the conversation on topic and focused.
 
@@ -99,7 +99,7 @@ During the daily standup each engineer should answer the following questions, tr
 
 **Inputs / Preparation:**  
 - Ensure all demonstration items are ready and accessible.
-- Prepare brief talking points or a short walkthrough for each completed feature.
+- Prepare brief talking points or a short walk through for each completed feature.
 
 **Expected Outputs:**  
 - Stakeholder feedback on the completed increments.
@@ -201,10 +201,10 @@ During the daily standup each engineer should answer the following questions, tr
 
 **Inputs / Preparation:**  
 - Product Owner prepares candidate backlog items.
-- Architects/Eng. Mgmt review items for feasibility and clarity before the meeting.
+- Architects/Eng. management review items for feasibility and clarity before the meeting.
 
 **Expected Outputs:**  
-- A prioritized and well-defined backlog of items suitable for the next sprint planning, this becomes the runway for engineering and does not need to be limited to just the next sprint, attempt to define a well groomed backlog for up to 3 sprints ahead, any further planning could result in wasted effort if the product direction changes. The lenght of the engineering runway will be determined by the engineering teams velocity over time.
+- A prioritized and well-defined backlog of items suitable for the next sprint planning, this becomes the runway for engineering and does not need to be limited to just the next sprint, attempt to define a well groomed backlog for up to 3 sprints ahead, any further planning could result in wasted effort if the product direction changes. The length of the engineering runway will be determined by the engineering teams velocity over time.
 - Clarity on scope, acceptance criteria, and readiness of items.
 
 **Frequency:**  
@@ -226,7 +226,7 @@ During the daily standup each engineer should answer the following questions, tr
 - This meeting is an open technical discussion to cover all and any topics, it should not be used for planning or scope definition rather it should focus on technical approaches and proposals.
 
 **Who Should Attend:**  
-- **Optional (recomended):** Architects, Engineering Manager, Backend/Frontend Developers, Product Owner, Designers, Testers/QA, SRE, Operations.
+- **Optional (recommended):** Architects, Engineering Manager, Backend/Frontend Developers, Product Owner, Designers, Testers/QA, SRE, Operations.
 
 **Inputs / Preparation:**  
 - Prepare relevant documentation, code snippets, or diagrams.
@@ -246,7 +246,7 @@ During the daily standup each engineer should answer the following questions, tr
 - Provide high-level team updates, project/organizational announcements, and ensure everyone is aligned with the overall direction.
 
 **What to Do:**  
-- Share roadmap updates, upcoming milestones, and any organizational changes.
+- Share road map updates, upcoming milestones, and any organizational changes.
 - Confirm that everyone understands priorities and timelines.
 
 **What Not to Do:**  
