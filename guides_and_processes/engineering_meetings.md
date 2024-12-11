@@ -12,22 +12,20 @@ The following is a list of the current recurring development team meetings, thei
   - [Sprint Planning (Start of Sprint)](#sprint-planning-start-of-sprint)
   - [Backlog Grooming](#backlog-grooming)
   - [Tech Discussion](#tech-discussion)
-  - [Catalyst Team Weekly Meeting](#catalyst-team-weekly-meeting)
 
 
 ### Summary
 
 Meeting matrix for roles, note this is just a high level guide, attendance at meetings is determined by the role of each engineer.
 
-| Meeting                       | Architects         | Product Owner        | Eng. Manager         | Backend Developers            | Frontend Developers           | Designers                           | Design Manager                      | Testers/QA                         | SRE             | Operations       |
-|-------------------------------|--------------------|----------------------|----------------------|-------------------------|-------------------------|--------------------------------------|-------------------------------------|-------------------------------------|-----------------|-----------------|
-| Standup (Mon-Thu)             | X                  | (Optional)           | X                    | X                       | X                       | (Optional)                           | (Optional)                          | (Optional)                          | (Optional)      | (Optional)      |
-| Sprint Demo (End of Sprint)   | X                  | X                    | X                    | X                       | X                       | (Recommended)                        | (Recommended)                       | (Recommended)                       | (Recommended)    | (Recommended)    |
-| Sprint Retro (End of Sprint)  | X                  | X                    | X                    | X                       | X                       | X                                    | X                                   | X                                   | (As Required)    | (As Required)    |
-| Sprint Planning (Start)       | X                  | X                    | X                    | X                       | X                       | X          | X                        | X             | (As Required)      | (As Required)      |
-| Backlog Grooming              | X                  | X                    | X                    | (On Request)| (On Request)| (On Request)             | X           | (On Request)            | (On Request) | (On Request) |
-| Tech Discussion (Mon & Thu)   | (Optional)         | (Optional)           | (Optional)           | (Optional)              | (Optional)              | (Optional)                | (Optional)               | (Optional)               | (Optional) | (Optional) |
-| Catalyst Team Weekly Meeting   | (Recommended)      | (Recommended)        | (Recommended)        | (Recommended)           | (Recommended)           | (Recommended)                        | (Recommended)                       | (Recommended)                       | (Recommended)    | (Recommended)    |
+| **Meeting**                      | **When**        | **Architects** | **Product Owner** | **Eng. Manager** | **Developers** | **Designers** | **Design Manager** | **Testers/QA** | **SRE**    | **Operations** |
+|----------------------------------|-----------------|-----------------|--------------------|-------------------|----------------|----------------|---------------------|-----------------|-------------|----------------|
+| **Standup**                      | Daily           | X               | X                  | X                 | X              | X              | X                   | X               | X           | Optional       |
+| **Sprint Demo**                  | End of Sprint   | X               | X                  | X                 | X              | Recommended    | Recommended         | Recommended     | Recommended | Recommended    |
+| **Sprint Retro**                 | End of Sprint   | X               | X                  | X                 | X              | X              | X                   | X               | On Request  | Optional       |
+| **Sprint Planning**              | Start of Sprint | X               | X                  | X                 | X              | X              | X                   | X               | On Request  | On Request     |
+| **Backlog Grooming**             | Ongoing         | X               | X                  | X                 | On Request     | On Request     | X                   | On Request      | On Request  | On Request     |
+| **Tech Discussion**              | Twice Weekly    | Recommended     | Recommended        | Recommended       | Recommended    | Recommended    | Recommended         | Recommended     | Recommended | Recommended    |
 
 This matrix provides a high-level guideline. Actual attendance may vary depending on project stage, see the following sections for more details on the purpose of each meeting and guidelines on attendance.
 
@@ -35,7 +33,7 @@ This matrix provides a high-level guideline. Actual attendance may vary dependin
 
 ### Standup (Daily, ~15 min)
 
-**Purpose:**  
+**Purpose:**    
 - Quickly daily sync of the engineering team on their current progress, immediate goals, and to identify blockers.
 
 **What to Do:**  
@@ -59,7 +57,7 @@ This matrix provides a high-level guideline. Actual attendance may vary dependin
 - Quick hand-offs or follow-up discussions scheduled separately if needed. (Process to be defined in the absence of a scrum master)
 
 **Frequency:**  
-- Monday - Thursday (no standup on fridays).
+- Daily: Unless otherwise excluded by the team calendar.
 
 
 #### Notes for engineers
@@ -70,7 +68,7 @@ During the daily standup each engineer should answer the following questions, tr
 >
 > 1. **What did I do since the last standup to achieve the sprint goal?**
 > 2. **What will I be working on today?**
-> 3. **Do I currently have or forsee any blockers or impediments that will prevent me from completing my current task?**
+> 3. **Do I currently have or foresee any blockers or impediments that will prevent me from completing my current task?**
 
 
 > #### 💡 **Note**
@@ -236,31 +234,4 @@ During the daily standup each engineer should answer the following questions, tr
 - Wider understanding by the team in relation to the topics discussed during the meeting.
 
 **Frequency:**  
-- Weekly (every Monday and Thursday).
-
----
-
-### Catalyst Team Weekly Meeting
-
-**Purpose:**  
-- Provide high-level team updates, project/organizational announcements, and ensure everyone is aligned with the overall direction.
-
-**What to Do:**  
-- Share road map updates, upcoming milestones, and any organizational changes.
-- Confirm that everyone understands priorities and timelines.
-
-**What Not to Do:**  
-- Avoid deep technical or task-level discussions.
-
-**Who Should Attend:**  
-- **Recommended:** Everyone
-
-**Inputs / Preparation:**  
-- Prepare any necessary high-level announcements as required.
-
-**Expected Outputs:**  
-- Shared understanding of the current project state and upcoming changes.
-- Clear sense of direction and any organizational announcements communicated.
-
-**Frequency:**  
-- Weekly
+- Twice Weekly (as scheduled in the Team calendar).
