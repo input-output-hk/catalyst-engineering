@@ -70,7 +70,7 @@ During the daily standup each engineer should answer the following questions, tr
 >
 > 1. **What did I do since the last standup to achieve the sprint goal?**
 > 2. **What will I be working on today?**
-> 3. **Do I currently have or forsee any blockers or impediments that will prevent me from completing my current task?**
+> 3. **Do I currently have or foresee any blockers or impediments that will prevent me from completing my current task?**
 
 
 > #### 💡 **Note**
