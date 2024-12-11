@@ -44,7 +44,7 @@
 - **Attendees:** Engineering Managers, Product Manager
 - **Purpose:**
   - Prioritize and refine the backlog
-  - Ensure alignment between engineering and product roadmap
+  - Ensure alignment between engineering and product road map
 
 ### Engineering Management Meeting
 - **Attendees:** Engineering Managers
