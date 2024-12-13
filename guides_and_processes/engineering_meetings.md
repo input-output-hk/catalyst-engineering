@@ -185,7 +185,7 @@ During the daily standup each engineer should answer the following questions, tr
 - Identify any items needing further refinement before they can be moved into a “Ready for Dev” state.
 
 **What to Do:**  
-- Review candidate tickets/epics, clarify acceptance criteria, confirm estimates.
+- Review candidate tickets/epics, clarify acceptance criteria, confirm tasks have been estimated by the engineering team.
 - Ensure upcoming work is well-defined and aligns with product goals and architectural standards.
 - Ensure each task/epic has the minimum required criteria as defined by the team (see separate document)
 
