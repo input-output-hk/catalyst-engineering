@@ -2,29 +2,33 @@
 
 > All things engineering: processes, best practices, setup guides, and more!
 
-* [📚 Catalyst Engineering](#-catalyst-engineering)
-  * [Getting Started](#getting-started)
-    * [Guides \& Processes](#guides--processes)
-    * [Style Guides](#style-guides)
-    * [Engineering Directory](#engineering-directory)
-    * [Repositories](#repositories)
-    * [Learning Resources](#learning-resources)
-  * [Support](#support)
-  * [License](#license)
+- [📚 Catalyst Engineering](#-catalyst-engineering)
+  - [Getting Started](#getting-started)
+    - [Guides \& Processes](#guides--processes)
+    - [Style Guides](#style-guides)
+    - [Engineering Directory](#engineering-directory)
+    - [Repositories](#repositories)
+    - [Learning Resources](#learning-resources)
+  - [Support](#support)
+  - [License](#license)
 
 ## Getting Started
 
 ### Guides & Processes
 
 - [Branch Policy](guides_and_processes/branch_policy.md)
-- [Meetings Policy](guides_and_processes/meeting_policy.md)
-- [Ownership Policy](guides_and_processes/ownership.md)
-- [Release Policy](guides_and_processes/release_policy.md)
-- [Development Lifecycle](guides_and_processes/development_lifecycle.md)
+- [Bug Severity Policy](guides_and_processes/bug_severity_policy.md)
 - [Code Reviews](guides_and_processes/code_reviews.md)
-- [On-Call Policy](guides_and_processes/on_call_policy.md)
-- [Refactoring Policy](guides_and_processes/refactoring_policy.md)
+- [Development Lifecycle](guides_and_processes/development_lifecycle.md)
+- [Engineering Meetings](guides_and_processes/engineering_meetings.md)
 - [Issue Policy](guides_and_processes/issue_policy.md)
+- [Meeting Policy](guides_and_processes/meeting_policy.md)
+- [On-Call Policy](guides_and_processes/on_call_policy.md)
+- [Ownership](guides_and_processes/ownership.md)
+- [Process Improvements](guides_and_processes/process_improvements.md)
+- [Refactoring Policy](guides_and_processes/refactoring_policy.md)
+- [Release Policy](guides_and_processes/release_policy.md)
+- [Releases](guides_and_processes/releases.md)
 
 ### Style Guides
 
@@ -37,11 +41,12 @@
 ### Repositories
 
 - [All things engineering: processes, best practices, setup guides, and more!](https://github.com/input-output-hk/catalyst-engineering)
-- [Catalyst CI](https://github.com/input-output-hk/catalyst-ci)
 - [Catalyst Voices](https://github.com/input-output-hk/catalyst-voices)
 - [Hermes](https://github.com/input-output-hk/hermes)
+- [Catalyst Libs](https://github.com/input-output-hk/catalyst-libs)
+- [Catalyst CI](https://github.com/input-output-hk/catalyst-ci)
+- [Catalyst Forge](https://github.com/input-output-hk/catalyst-forge)
 - [Core Catalyst Governance Engine and utilities](https://github.com/input-output-hk/catalyst-core)
-- [Custom GH Action to speed up and simplify building mdbooks for the Catalyst project.](https://github.com/input-output-hk/catalyst-gh-tools)
 
 ### Learning Resources
 
