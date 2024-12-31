@@ -17,7 +17,7 @@
 ### Guides & Processes
 
 - [Branch Policy](guides_and_processes/branch_policy.md)
-- [Bug Severity Policy](guides_and_processes/bug_severity_policy.md)
+- [Bug Severity Policy](guides_and_processes/bug_severity.md)
 - [Code Reviews](guides_and_processes/code_reviews.md)
 - [Development Lifecycle](guides_and_processes/development_lifecycle.md)
 - [Engineering Meetings](guides_and_processes/engineering_meetings.md)
