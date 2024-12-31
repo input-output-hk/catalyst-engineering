@@ -1,5 +1,23 @@
 # Engineering Process Improvements
 
+- [Engineering Process Improvements](#engineering-process-improvements)
+  - [PR Review Process](#pr-review-process)
+    - [Why We're Improving](#why-were-improving)
+    - [How to Implement](#how-to-implement)
+    - [What to Expect](#what-to-expect)
+      - [Architect/Engineering Management Role](#architectengineering-management-role)
+      - [Developer Role](#developer-role)
+      - [Review Guidelines](#review-guidelines)
+    - [Expected Outcomes](#expected-outcomes)
+    - [Note on PR Size](#note-on-pr-size)
+  - [Backlog Grooming Improvements](#backlog-grooming-improvements)
+    - [Why We're Improving](#why-were-improving-1)
+    - [How to Implement](#how-to-implement-1)
+    - [What to Expect](#what-to-expect-1)
+      - [Management Role](#management-role)
+      - [Developer Role](#developer-role-1)
+    - [Expected Outcomes](#expected-outcomes-1)
+
 ## PR Review Process
 
 ### Why We're Improving
@@ -53,9 +71,10 @@
 - More efficient review process for both small and large changes
 
 ### Note on PR Size
-PRs that can be completed in one day or less may proceed directly to review without the draft stage. This helps maintain efficiency for smaller changes while ensuring proper oversight for larger modifications.
 
----
+PRs that can be completed in one day or less may proceed directly to review without the draft stage.
+This helps maintain efficiency for smaller changes while ensuring proper oversight for larger modifications.
+
 
 ## Backlog Grooming Improvements
 
@@ -81,11 +100,13 @@ PRs that can be completed in one day or less may proceed directly to review with
 ### What to Expect
 
 #### Management Role
+
 - Focus on backlog refinement and prioritization
 - Collaborative improvement of epics/issues
 - Prepare clear communication of upcoming work
 
 #### Developer Role
+
 - Reduced meeting attendance
 - More time for focused development work
 - 24-hour window to review upcoming work
