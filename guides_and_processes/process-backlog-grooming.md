@@ -1,5 +1,7 @@
 # Engineering Backlog Grooming
 
+[TOC]
+
 ## Supporting definitions for Milestones, Epics, and Tasks
 
 ### Milestones
