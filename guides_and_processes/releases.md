@@ -18,7 +18,6 @@ This strategy is likely to change as Catalyst's systems matures.
 New backend versions are released every two weeks (each sprint).
 Sometimes we do out-of-schedule patch releases.
 
-
 ### Library versioning and release cadence
 
 Each release include new versions of:
