@@ -45,8 +45,8 @@ This matrix provides a high-level guideline. Actual attendance may vary dependin
 - Do not introduce unrelated topics or turn it into a full planning session.
 
 **Who Should Attend:**  
-- **Mandatory:** Backend Developers, Frontend Developers, Engineering Manager, Architects.  
-- **Optional (as needed):** Product Owner, Designers, Design Manager, Testers/QA, SRE, Operations (if actively involved).
+- **Mandatory:** Backend Developers, Frontend Developers, Engineering Manager, Architects, Testers/QA.  
+- **Optional (as needed):** Product Owner, Designers, Design Manager, SRE, Operations (if actively involved).
 
 **Inputs / Preparation:**  
 - Have a clear understanding of your current tasks and any impediments.
