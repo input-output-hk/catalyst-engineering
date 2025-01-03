@@ -2,17 +2,17 @@
 The following is a list of the current recurring development team meetings, their primary purposes, and clear guidelines on what is and is not required for each meeting.
 
 ### Meetings
-- [Catalyst Engineering Team Meetings](#catalyst-engineering-team-meetings)
-  - [Meetings](#meetings)
-  - [Summary](#summary)
-  - [Standup (Daily, ~15 min)](#standup-daily-15-min)
-    - [Notes for engineers](#notes-for-engineers)
-  - [Sprint Demo (End of Sprint)](#sprint-demo-end-of-sprint)
-  - [Sprint Retro (End of Sprint)](#sprint-retro-end-of-sprint)
-  - [Sprint Planning (Start of Sprint)](#sprint-planning-start-of-sprint)
-  - [Backlog Grooming](#backlog-grooming)
-  - [Tech Discussion](#tech-discussion)
-  - [Catalyst Team Weekly Meeting](#catalyst-team-weekly-meeting)
+- [Engineering Meeting Structure](#engineering-meeting-structure)
+  - [Weekly Meetings](#weekly-meetings)
+    - [Monday Technical Meeting](#monday-technical-meeting)
+    - [Thursday Technical Meeting](#thursday-technical-meeting)
+  - [Daily Meetings](#daily-meetings)
+    - [Team Standup](#team-standup)
+  - [Bi-Weekly Meetings](#bi-weekly-meetings)
+    - [Sprint Demo and Retrospective](#sprint-demo-and-retrospective)
+  - [Management Meetings](#management-meetings)
+    - [Backlog Grooming](#backlog-grooming-1)
+    - [Engineering Management Meeting](#engineering-management-meeting)
 
 
 ### Summary
@@ -264,3 +264,76 @@ During the daily standup each engineer should answer the following questions, tr
 
 **Frequency:**  
 - Weekly
+
+# Engineering Meeting Structure
+
+- [Engineering Meeting Structure](#engineering-meeting-structure)
+  - [Weekly Meetings](#weekly-meetings)
+    - [Monday Technical Meeting](#monday-technical-meeting)
+    - [Thursday Technical Meeting](#thursday-technical-meeting)
+  - [Daily Meetings](#daily-meetings)
+    - [Team Standup](#team-standup)
+  - [Bi-Weekly Meetings](#bi-weekly-meetings)
+    - [Sprint Demo and Retrospective](#sprint-demo-and-retrospective)
+  - [Management Meetings](#management-meetings)
+    - [Backlog Grooming](#backlog-grooming-1)
+    - [Engineering Management Meeting](#engineering-management-meeting)
+
+## Weekly Meetings
+
+### Monday Technical Meeting
+
+- **Attendees:** Engineering Team
+- **Purpose:**
+  - Discuss technical topics
+  - Share knowledge
+  - Address challenges
+
+### Thursday Technical Meeting
+
+- **Attendees:** Engineering Team
+- **Purpose:**
+  - Discuss technical topics
+  - Share knowledge
+  - Address challenges
+
+## Daily Meetings
+
+### Team Standup
+- **Attendees:** Individual Engineering Teams
+- **Purpose:**
+  - Quick update on daily progress
+  - Identify blockers
+  - Coordinate tasks
+
+## Bi-Weekly Meetings
+
+### Sprint Demo and Retrospective
+
+- **Attendees:** Engineering Team, Product Team
+- **Purpose:**
+  - **Demo:**
+    - Showcase completed features
+    - Gather feedback
+  - **Retrospective:**
+    - Reflect on the sprint
+    - Identify areas for improvement
+    - Celebrate successes
+
+## Management Meetings
+
+### Backlog Grooming
+
+- **Attendees:** Engineering Managers, Product Manager
+- **Purpose:**
+  - Prioritize and refine the backlog
+  - Ensure alignment between engineering and product road map
+
+### Engineering Management Meeting
+
+- **Attendees:** Engineering Managers
+- **Purpose:**
+  - Discuss management-specific topics
+  - Address resource allocation
+  - Review team performance
+  - Manage team dynamics
