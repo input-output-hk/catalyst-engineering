@@ -15,8 +15,8 @@
     - [Disposing `AnimationController` Instances in Flutter](#disposing-animationcontroller-instances-in-flutter)
   - [DO always dispose of ScrollControllers when you are done with them](#do-always-dispose-of-scrollcontrollers-when-you-are-done-with-them)
   - [Common constants approach](#common-constants-approach)
-  - [DO Avoiding large trees of widgets](#do-avoiding-large-trees-of-widgets)
   - [DO always treat warnings as errors](#do-always-treat-warnings-as-errors)
+  - [CONSIDER Using the Part-of Pattern for Large Widget Files](#consider-using-the-part-of-pattern-for-large-widget-files)
 
 ##  DON'T use functions which return widgets
 
@@ -507,8 +507,6 @@ process the input, and finally call `dispose` to clean up the resources when we'
 
 ## DO always dispose of AnimationControllers when you are done with them
 
----
-
 ### Disposing `AnimationController` Instances in Flutter
 
 In Flutter, `AnimationController`s are used to drive animations.
@@ -701,9 +699,6 @@ abstract class _NewItemConst {
   static const wallet = 'WALLET';
 }
 ```
-## DO Avoiding large trees of widgets
-
-
 
 ## DO always treat warnings as errors
 
@@ -747,3 +742,99 @@ In this example, the `unused_local_variable` and `deprecated_member_use` warning
 Now, whenever the Dart analyzer detects an unused local variable or the use of a deprecated member,
 it will report these as errors, forcing the developer to address these issues before proceeding.
 This is a way to ensure that the code adheres to certain quality standards and potential issues are addressed promptly.
+
+
+## CONSIDER Using the Part-of Pattern for Large Widget Files
+
+Split Dart files into multiple parts when they exceed any of these thresholds:
+
+* More than 300 lines of widget code (excluding imports, comments, and tests)
+* More than 3 complex widgets (widgets with significant business logic or state management)
+* More than 5 simple widgets (stateless widgets with minimal logic)
+
+**Rationale:**
+
+Breaking large files into smaller, focused parts provides several benefits:
+
+* Reduces cognitive load by organizing related widgets together
+* Enables parallel development by reducing merge conflicts
+* Improves code review efficiency by grouping related changes
+* Maintains better git blame/history tracking for specific components
+* Simplifies navigation in IDEs through smaller, focused files
+
+> Note that using parts comes with some trade-offs:
+>
+> * Additional file management overhead
+>
+> * Need to carefully consider widget visibility
+>
+> * Potential for circular dependencies if not structured carefully
+
+**Example:**
+
+Main file (`my_widget.dart`):
+
+```dart
+import 'package:flutter/material.dart';
+import 'package:my_app/shared/theme.dart';
+
+// Declare parts that compose this widget
+part 'widgets/header_widget.dart';
+part 'widgets/content_widget.dart';
+part 'widgets/footer_widget.dart';
+
+/// Main container widget that composes the parts together
+class ProductDetailsPage extends StatelessWidget {
+  final Product product;
+
+  const ProductDetailsPage({required this.product, super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Column(
+        children: [
+          _ProductHeader(product: product),
+          _ProductContent(product: product),
+          _ProductFooter(product: product),
+        ],
+      ),
+    );
+  }
+}
+```
+
+Part file (`widgets/header_widget.dart`):
+
+```dart
+part of '../my_widget.dart';
+
+/// Header widget containing product image and title
+/// Private to my_widget.dart and its parts
+class _ProductHeader extends StatelessWidget {
+  final Product product;
+
+  const _ProductHeader({required this.product});
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        Image.network(product.imageUrl),
+        Text(product.title, style: Theme.of(context).textTheme.headlineMedium),
+      ],
+    );
+  }
+}
+```
+**Best Practices:**
+
+* Keep related widgets together in the same part file
+* Use clear, descriptive file names that indicate the contained widgets
+* Consider creating subdirectories for different sections of complex widgets
+* Document the responsibility of each part file
+* Maintain consistent naming conventions across parts
+
+By using the part/part of directives, you can split large files into smaller,
+more manageable pieces while keeping related widgets together.
+This approach improves code readability, maintainability, and collaboration.
