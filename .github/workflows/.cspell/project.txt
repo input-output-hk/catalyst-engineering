@@ -27,3 +27,5 @@ sidechains
 surrealdb
 Tendermint
 testnet
+jormungandr
+rustup
