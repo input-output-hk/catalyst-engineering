@@ -34,6 +34,10 @@ Also, daily meetings of the Catalyst Core are lead by developers themselves, swi
 
 - [input-output-hk/Projects/Catalyst](https://github.com/orgs/input-output-hk/projects/102/views/2?filterQuery=iteration%3A%40current%2C%40previous) – the board showing progress on the last two iterations.
 
+And to know **when** is your turn to lead the daily meeting, consult:
+
+> TODO: link to where is the dev queue.
+
 ## Git repositories
 
 Git is the version control system of choice, with the Catalyst repositories hosted online at [input-output-hk](https://github.com/input-output-hk) on GitHub. Since the code is spread across a vast number of repos, some **notable mentions** should be made:
@@ -51,7 +55,7 @@ Git is the version control system of choice, with the Catalyst repositories host
     - WIP.
 - [hermes](https://github.com/input-output-hk/hermes) – unified codebase for the Hermes engine.
 
-> TODO: link branch policies, code reviews, refactoring, etc
+> TODO: link branch policies, code reviews, refactoring, etc.
 
 ## Setting up the workspace
 
@@ -73,11 +77,11 @@ Regardless of what is the task at hand, some tools are general enough within the
 
 ### Frontend tools
 
-> TODO: add flutter with a minimal non-dummy desc
+> TODO: add flutter with a minimal non-dummy desc.
 
 ### Backend tools
 
-> TODO: add rustup and mention what version are we running 
+> TODO: add rustup and mention what version are we running.
 
 > TODO: add scylla marked (Optional). Link to existing local guidelines https://github.com/input-output-hk/catalyst-voices/tree/main/utilities/local-scylla.
 
