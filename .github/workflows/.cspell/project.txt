@@ -29,3 +29,4 @@ Tendermint
 testnet
 jormungandr
 rustup
+Justfile
