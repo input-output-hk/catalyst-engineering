@@ -71,7 +71,7 @@ Regarding **Github issues**. As mentioned in [previous section](#staying-in-touc
 Regardless of what is the task at hand, some tools are general enough within the project to be worth installment:
 
 - [vscode](https://github.com/VSCodium/vscodium) – although an editor is in the end the developer's choice, a lot of Catalyst repositories contain curated dot files for Visual Studio Code and advise for using it by default.
-- [just](https://github.com/casey/just) – a tool similar to [GNU Make](https://www.gnu.org/software/make) that can remove some command line boilerplate; the majority if not all Catalyst repositories maintain the special Justfiles in order for [just](https://github.com/casey/just) to be always an available option for running the apps.
+- [just](https://github.com/casey/just) – a tool similar to [GNU Make](https://www.gnu.org/software/make) that can remove some command line boilerplate; the majority if not all Catalyst repositories maintain a Justfile in order for [just](https://github.com/casey/just) to be always an available option for running the apps.
 
 Then, a few **containerization** tools that are widely across Catalyst. Although not always essential, they allow you to run Catalyst executables consistently and to manually test the effect of your updates outside of your local environment.
 
