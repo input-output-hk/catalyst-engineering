@@ -41,14 +41,14 @@ Git is the version control system of choice, with the Catalyst repositories host
 
 - [catalyst-engineering](https://github.com/input-output-hk/catalyst-engineering) – home to the learning resources and guides such as this one.
 - [catalyst-core](https://github.com/input-output-hk/catalyst-core) – the legacy Catalyst stack that's currently running in production; major parts of it are currently being upgraded and rewritten to [catalyst-voices](https://github.com/input-output-hk/catalyst-voices) and [catalyst-libs](https://github.com/input-output-hk/catalyst-libs).
-    - [jormungandr](https://github.com/input-output-hk/catalyst-core/tree/main/src/jormungandr) (Rust) – a node implementation, aimed to support the Ouroboros type of consensus protocol.
+    - [jormungandr](https://github.com/input-output-hk/catalyst-core/tree/main/src/jormungandr) (Rust) – Catalyst voting blockchain implementation.
 - [catalyst-voices](https://github.com/input-output-hk/catalyst-voices) – the replacement Catalyst stack that's currently in development.
     - [catalyst-gateway](https://github.com/input-output-hk/catalyst-voices/tree/main/catalyst-gateway) (Rust) – the backend of the Catalyst Voices hosted stack.
     - WIP.
 - [catalyst-libs](https://github.com/input-output-hk/catalyst-libs) – unified codebase for the Catalyst project.
     - [catalyst-voting](https://github.com/input-output-hk/catalyst-libs/tree/main/rust/catalyst-voting) (Rust) – in-progress replacement for [chain-vote](https://github.com/input-output-hk/catalyst-core/tree/main/src/chain-libs/chain-vote) and [chain-crypto](https://github.com/input-output-hk/catalyst-core/tree/main/src/chain-libs/chain-crypto) from [catalyst-core](https://github.com/input-output-hk/catalyst-core).
-    - [rbac-registration](https://github.com/input-output-hk/catalyst-libs/tree/main/rust/rbac-registration) (Rust) – registration mechanism reinvented utilizing RBAC.
-    - [signed_doc](https://github.com/input-output-hk/catalyst-libs/tree/main/rust/signed_doc) (Rust) – Catalyst signed document implementation.
+    - [rbac-registration](https://github.com/input-output-hk/catalyst-libs/tree/main/rust/rbac-registration) (Rust) – Roll Based Access Control (RBAC) registration implementation crate.
+    - [signed_doc](https://github.com/input-output-hk/catalyst-libs/tree/main/rust/signed_doc) (Rust) – Catalyst Signed Document implementation.
     - WIP.
 - [hermes](https://github.com/input-output-hk/hermes) – unified codebase for the Hermes engine.
 
