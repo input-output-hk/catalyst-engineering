@@ -34,5 +34,5 @@ document the change in the release notes.
 7. Consider using signed tags to provide additional verification of the authenticity of each release.
 This can help users trust that they are downloading legitimate code.
 
-1. All usages of release tags should align with the `project` name of the release.
+8. All usages of release tags should align with the `project` name of the release.
    E.g. if `gateway` artifact is used, the referenced tag **must** be for the `gateway` project.
