@@ -39,4 +39,4 @@ This can help users trust that they are downloading legitimate code.
 
 9. Version of the libary should be aligned with the version in the release tag.
    E.g. if `catalyst-types` rust library version released version inside the `Cargo.toml` file is `0.4.0`,
-   release tag **must** be `catalyst-types/v0.4.0`
+   release tag **must** be `catalyst-types/v0.4.0`.
