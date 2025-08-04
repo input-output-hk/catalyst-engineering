@@ -36,3 +36,7 @@ This can help users trust that they are downloading legitimate code.
 
 8. All usages of release tags should align with the `project` name of the release.
    E.g. if `gateway` artifact is used, the referenced tag **must** be for the `gateway` project.
+
+9. Version of the libary should be aligned with the version in the release tag.
+   E.g. if `catalyst-types` rust library version released version inside the `Cargo.toml` file is `0.4.0`,
+   release tag **must** be `catalyst-types/v0.4.0`
