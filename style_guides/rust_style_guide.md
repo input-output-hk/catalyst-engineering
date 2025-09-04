@@ -18,7 +18,8 @@ Exceptions can (and sometimes should) be made, however:
       * [General advice around names](#general-advice-around-names)
   * [Pay attention to the public API of your crate](#pay-attention-to-the-public-api-of-your-crate)
   * [Type safety](#type-safety)
-    * [Use newtypes (a.k.a. microtypes)](#use-newtypes-aka-microtypes)
+    * [Use newtypes (a.k.a.
+      microtypes)](#use-newtypes-aka-microtypes)
     * [Don't over-abstract](#dont-over-abstract)
   * [Unsafe code](#unsafe-code)
   * [Docs](#docs)
@@ -45,7 +46,8 @@ If you're not a Nix user, make sure you have the correct versions.
 * Clippy is not enabled for older parts of the codebase.
   This is allowed for legacy code, but any new code should have `clippy` enabled.
   We're actively working to get it enabled on everything
-* Avoid raw identifiers. Instead, use abbreviations/misspellings (i.e. `r#crate` -> `krate`, `r#type` -> `ty`, etc)
+* Avoid raw identifiers.
+  Instead, use abbreviations/misspellings (i.e. `r#crate` -> `krate`, `r#type` -> `ty`, etc)
 
 TLDR: run:
 
@@ -91,14 +93,14 @@ Integer arithmetic may panic or behave unexpectedly depending on build settings.
 In debug mode, overflows cause a panic, but in release mode, they silently wrap.
 In both modes, division by `0` causes a panic.
 
-By forbidding integer arithmetic, you have to choose a behaviour, by writing either:
+By forbidding integer arithmetic, you have to choose a behavior, by writing either:
 
 * `a.checked_add(b)` to return an `Option` that you can error-handle
 * `a.saturating_add(b)` to return a + b, or the max value if an overflow occurred
 * `a.wrapping_add(b)` to return a + b, wrapping around if an overflow occurred
 
 By being explicit, we prevent the developer from "simply not considering" how their code behaves in the presence of overflows.
-In a ledger application, silently wrapping could be catastrophic, so we really want to be explicit about what behaviour we expect.
+In a ledger application, silently wrapping could be catastrophic, so we really want to be explicit about what behavior we expect.
 
 ### Exceptions for `clippy`
 
@@ -107,7 +109,8 @@ These lints are disabled:
 * `clippy::match_bool` - sometimes a `match` statement with `true =>` and `false =>` arms is sometimes more concise and equally readable
 * `clippy::module_name_repetition` - warns when creating an item with a name than ends with the name of the module it's in
 * `clippy::derive_partial_eq_without_eq` - warns when deriving `PartialEq` and not `Eq`.
-  This is a semver hazard. Deriving `Eq` is a stronger semver guarantee than just `PartialEq`, and shouldn't be the default.
+  This is a semver hazard.
+  Deriving `Eq` is a stronger semver guarantee than just `PartialEq`, and shouldn't be the default.
 * `clippy::missing_panics_doc` - this lint warns when a function might panic, but the docs don't have a `panics` section.
   This lint is buggy, and doesn't correctly identify all panics.
   Code should be written to explicitly avoid intentional panics.
@@ -164,7 +167,8 @@ Some guidelines for when to use abbreviations:
 * if it's a well-known abbreviation, it's probably good (e.g. `ctx` for "context", `db` for "database")
 * if it's ambiguous (i.e. it could be short for multiple things) either use the full word, or a longer abbreviation that isn't ambiguous.
 * Remember that abbreviations are context-sensitive.
-  (if I see `db` in a database library, it's probably "database". If I see it in an audio processing library it is probably "decibels").
+  (if I see `db` in a database library, it's probably "database".
+  If I see it in an audio processing library it is probably "decibels").
 
 #### General advice around names
 
@@ -292,7 +296,9 @@ If you find yourself wanting to use `unsafe`, try the following:
   * Otherwise, search on crates.io for a `_sys` crate.
 * if you want to create a cool data structure that requires unsafe:
   * does it really need unsafe?
-  * is it a doubly linked list? If so, have you got benchmarks that show that a `VecDeque` is insufficient? Something something cache-friendly...
+  * is it a doubly linked list?
+    If so, have you got benchmarks that show that a `VecDeque` is insufficient?
+    Something something cache-friendly...
   * is there a suitable implementation on crates.io?
   * is this data structure really noticeably better than what we have in `std`?
 * if you want to do a performance optimization (e.g. using `unreachable_unchecked()` to remove a bounds check):
@@ -308,7 +314,7 @@ As mentioned above, we should enable `#![deny(missing_docs)]` on all new code.
 But that doesn't mean we shouldn't document private items.
 Ideally, we'd document as much as possible.
 
-Of course, for tiny helper functions, or functions whose behaviour is obvious from looking don't need documentation.
+Of course, for tiny helper functions, or functions whose behavior is obvious from looking don't need documentation.
 For example, this sort of comment doesn't add much:
 
 ```rust
@@ -333,7 +339,7 @@ Humans learn by copying examples, so providing some can drastically reduce the a
 If you need some setup for your tests that you don't want to render in docs, prefix the line with `#`.
 When combined with the `include` macro, this can lead to pretty concise but also powerful test setup.
 
-If you need some inspiration, check out the docstests for `diesel`.
+If you need some inspiration, check out the doctests for `diesel`.
 
 ## Write code as if it's going to be in a web server
 
@@ -433,7 +439,7 @@ match try_foo() {
 In contexts where we don't want to recover from errors, use `Report` from the `color_eyre` crate.
 This is a trait object based error type which allows you to "fire and forget" an error.
 While technically *possible*, it's less ergonomic to recover from a `Result<T, Report>`.
-Therefore, only use this in contexts where the correct behaviour is "exit the program".
+Therefore, only use this in contexts where the correct behavior is "exit the program".
 This is commonly the case in CLI apps.
 
 **However**, even in CLI apps, it's good practice to split the logic into a `lib.rs` file (or modules) and have a separate binary.
