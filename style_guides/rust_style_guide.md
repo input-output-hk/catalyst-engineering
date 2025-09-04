@@ -309,8 +309,10 @@ In practice, `Arc::clone` adds noise rather than clarity.
 Just like spelling out every acronym in full text does.
 It conditions the reader to think about internals that don’t normally matter, which impedes overall understanding.
 
-Should we instead rename `Arc` to `AtomicReferenceCounter` because `Arc` means a piece of a circles edge.
-And we are trying to aid clarity,  No we should not, for the same reason we should not use `Arc::clone` explicitly.
+Should we instead rename `Arc` to `AtomicReferenceCounter` because `Arc` means a piece of a circles edge, and could be confusing?
+Does that not aid clarity, because it's explicit, and not implicit?
+No, it does not, and No we should not.
+For the same reason we should not use `Arc::clone` explicitly.
 
 Rust documentation frames `Arc::clone(&foo)` as an ergonomic aid.
 A convention to make code clearly expressive, not a necessity for correctness.
@@ -324,8 +326,8 @@ That’s the exact opposite of abstraction.
 Instead of trusting the type to “do the right thing,” you’re forcing a ritual reminder of its internals.
 Over time, this normalizes noise and makes true signals harder to notice in code reviews.
 
-In the case of `Arc` specifically, it should always preferably be used transparently inside a `Type` or `NewType Wrapper`,
-it should rarely if ever be "free".
+In the case of `Arc` specifically, it should always preferably be used opaquely inside a `Type` or `NewType Wrapper`,
+it should rarely if ever be "free" or used directly outside the type that contains it.
 In a NewType wrapper, it should always be opaque to the user of the NewType.
 
 Preferred:
