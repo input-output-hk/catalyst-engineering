@@ -35,3 +35,4 @@ newtypes
 microtypes
 zeroize
 Miri
+refcount
