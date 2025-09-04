@@ -283,6 +283,76 @@ Some alternative patterns are:
 * if you know all the variants at compile time, consider using an enum
 * swap out the implementation with conditional compilation
 
+If you do not have more than 1 implementation of some type, don't use a Trait.
+Even if you think you MIGHT have more than one later,
+when a second one is added is when the Trait is added, not before.
+
+### Trust the type system and the introspection capabilities of modern code editing environments
+
+#### Just use `foo.clone()` NOT `SomeType::clone(&foo)`
+
+Specifically for `Arc::clone()` it is sometimes recommended to explicitly wrap types which are internally `Arc<T>` for `clarity`.  
+This is a bad practice.
+
+`Arc::clone(&foo)` and `foo.clone()` are identical in semantics.
+Rust’s docs suggest `Arc::clone` as a convention for “explicitness,”
+but that explicitness comes at a cost:
+it exposes an implementation detail (reference counting) that the caller usually doesn’t need to care about.
+It also violates the principle of type abstraction.
+
+By contrast, `foo.clone()` is uniform across types.
+It requires less visual parsing, and keeps attention on the flow of the code,
+rather than the mechanics of one particular smart pointer.
+It aligns better with the abstraction principle that a type’s user shouldn’t need to know or worry about how cloning is implemented.
+
+In practice, `Arc::clone` adds noise rather than clarity.
+Just like spelling out every acronym in full text does.
+It conditions the reader to think about internals that don’t normally matter, which impedes overall understanding.
+
+Should we instead rename `Arc` to `AtomicReferenceCounter` because `Arc` means a piece of a circles edge, and could be confusing?
+Does that not aid clarity, because it's explicit, and not implicit?
+No, it does not, and No we should not.
+For the same reason we should not use `Arc::clone` explicitly.
+
+Rust documentation frames `Arc::clone(&foo)` as an ergonomic aid.
+A convention to make code clearly expressive, not a necessity for correctness.
+It is a flawed suggestion.
+In fluent reading, that extra explicitness doesn’t add clarity.  
+It slows comprehension because the reader has to parse more tokens that don’t actually matter.
+
+Requiring `Arc::clone` for every bump of the refcount conditions the reader to always think about implementation detail,
+even when it’s not relevant.
+That’s the exact opposite of abstraction.
+Instead of trusting the type to “do the right thing,” you’re forcing a ritual reminder of its internals.
+Over time, this normalizes noise and makes true signals harder to notice in code reviews.
+
+In the case of `Arc` specifically, it should always preferably be used opaquely inside a `Type` or `NewType Wrapper`,
+it should rarely if ever be "free" or used directly outside the type that contains it.
+In a NewType wrapper, it should always be opaque to the user of the NewType.
+
+Preferred:
+
+```rust
+pub struct MyType(Arc<SomeInnerType>);
+```
+
+Avoid:
+
+```rust
+pub struct MyType(pub Arc<SomeInnerType>);
+```
+
+Avoid:
+
+```rust
+let x = Arc::new(SomeInnerType);
+```
+
+##### TLDR
+
+* **Always use foo.clone() for consistency and reduced cognitive load.**
+* **When using Types or Structs with inner Arcs, the inner Arc should be opaque.**
+
 ## Unsafe code
 
 If you need unsafe code, put it in its own crate with a safe API.
