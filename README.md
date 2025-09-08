@@ -2,15 +2,15 @@
 
 > All things engineering: processes, best practices, setup guides, and more!
 
-* [📚 Catalyst Engineering](#-catalyst-engineering)
-  * [Getting Started](#getting-started)
-    * [Guides \& Processes](#guides--processes)
-    * [Style Guides](#style-guides)
-    * [Engineering Directory](#engineering-directory)
-    * [Repositories](#repositories)
-    * [Learning Resources](#learning-resources)
-  * [Support](#support)
-  * [License](#license)
+- [📚 Catalyst Engineering](#-catalyst-engineering)
+  - [Getting Started](#getting-started)
+    - [Guides \& Processes](#guides--processes)
+    - [Style Guides](#style-guides)
+    - [Engineering Directory](#engineering-directory)
+    - [Repositories](#repositories)
+    - [Learning Resources](#learning-resources)
+  - [Support](#support)
+  - [License](#license)
 
 ## Getting Started
 
@@ -29,6 +29,7 @@
 * [Refactoring Policy](guides_and_processes/refactoring_policy.md)
 * [Release Policy](guides_and_processes/release_policy.md)
 * [Releases](guides_and_processes/releases.md)
+* [OpenApi Versioning](guides_and_processes/openapi-versioning.md)
 
 ### Style Guides
 
