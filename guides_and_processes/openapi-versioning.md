@@ -10,6 +10,8 @@
 
 ## Referencing to the existing OpenApi spec file
 
-Any reference to an existing and properly versioned OpenAPI specification file must be made by referring to the defined [realease](./release_policy.md) using the following format:
+*Any* reference to an existing OpenAPI specification file
+**must** be a reference the specified [realease](./release_policy.md) using the following format:
 `<app_name>-openapi/vMAJOR.MINOR.PATCH`.
+
 The release version **must** match the specified version of the OpenAPI specification file.
