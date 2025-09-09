@@ -1,4 +1,4 @@
-<!-- cspell: OpenApi -->
+<!-- cspell: words openapi -->
 
 # OpenApi Versioning
 
