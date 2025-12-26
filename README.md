@@ -17,7 +17,7 @@
 * [Bug Severity](engineering/policies/bug-severity.md)
 * [Issue Policy](engineering/policies/issue-policy.md)
 * [Meeting Policy](engineering/policies/meeting-policy.md)
-* On-Call Policy (see [engineering/README.md](engineering/README.md#policies) for internal links)
+* [On-Call Policy](engineering/README.md#policies)
 * [Ownership](engineering/policies/ownership.md)
 * [Refactoring Policy](engineering/policies/refactoring-policy.md)
 * [Release Policy](engineering/policies/release-policy.md)
